@@ -6,3 +6,508 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 28ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 2990)
 
 
+Started GET "/" for ::1 at 2021-02-20 12:56:05 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.5ms | Allocations: 318)
+Completed 200 OK in 23ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 1820)
+
+
+Started GET "/main" for ::1 at 2021-02-20 12:56:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/main"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/main/index" for ::1 at 2021-02-20 12:56:15 +0300
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/malsadi/Documents/GitHub/vmv/public/packs
+[Webpacker] Hash: f86639f4459f31b34f60
+Version: webpack 4.46.0
+Time: 1581ms
+Built at: 02/20/2021 12:56:19 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-07e792d2b65403c647a1.js    124 KiB  application  [emitted] [immutable]  application
+js/application-07e792d2b65403c647a1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-07e792d2b65403c647a1.js js/application-07e792d2b65403c647a1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 4345ms (Views: 4343.6ms | ActiveRecord: 0.0ms | Allocations: 19243)
+
+
+Started GET "/" for ::1 at 2021-02-20 12:57:38 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.9ms | Allocations: 191)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 2431)
+
+
+Started GET "/main" for ::1 at 2021-02-20 12:57:43 +0300
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 4079)
+
+
+Started GET "/main" for ::1 at 2021-02-20 12:59:07 +0300
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 257)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 5110)
+
+
+Started GET "/main" for ::1 at 2021-02-20 13:18:21 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 380)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/malsadi/Documents/GitHub/vmv/public/packs
+[Webpacker] Hash: e9e53b8f543095aecd52
+Version: webpack 4.46.0
+Time: 2969ms
+Built at: 02/20/2021 1:18:27 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-16c5b165fd9bb473df11.js    663 KiB  application  [emitted] [immutable]  application
+js/application-16c5b165fd9bb473df11.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-16c5b165fd9bb473df11.js js/application-16c5b165fd9bb473df11.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 770 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+Completed 200 OK in 5575ms (Views: 5564.3ms | ActiveRecord: 0.0ms | Allocations: 82666)
+
+
+Started GET "/main" for ::1 at 2021-02-20 13:21:16 +0300
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 8932)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms | Allocations: 10207)
+
+
+  
+ActionView::Template::Error (The asset "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" is not present in the asset pipeline.):
+    3: <nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top">
+    4:   <div class="container">
+    5:     <a class="navbar-brand" href="/">
+    6:       <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+    7: 
+    8:     </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+    9:     <span class="navbar-toggler-icon"></span>
+  
+app/views/main/index.html.erb:6
+Started GET "/main" for ::1 at 2021-02-20 13:23:57 +0300
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 33.1ms | Allocations: 12466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 45.9ms | ActiveRecord: 0.0ms | Allocations: 20107)
+
+
+Started GET "/main" for ::1 at 2021-02-20 13:24:41 +0300
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 830)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 9301)
+
+
+Started GET "/" for ::1 at 2021-02-20 13:26:34 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.0ms | Allocations: 196)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 1053)
+
+
+Started GET "/" for ::1 at 2021-02-20 13:26:34 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.7ms | Allocations: 236)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 1044)
+
+
+Started GET "/main" for ::1 at 2021-02-20 13:26:38 +0300
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 828)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 9266)
+
+
+Started GET "/main" for ::1 at 2021-02-20 13:28:14 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 828)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 9245)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 13:28:17 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 0.5ms | Allocations: 137)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 7842)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 13:29:04 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 1.3ms | Allocations: 707)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 9109)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 13:32:13 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 1.7ms | Allocations: 706)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 9111)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 13:32:18 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 1.0ms | Allocations: 534)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 8044)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 13:33:37 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 1.3ms | Allocations: 706)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 9112)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 13:33:49 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 1.2ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 9128)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 13:33:51 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 1.0ms | Allocations: 533)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 8035)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 13:33:52 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 0.9ms | Allocations: 533)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 8045)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 13:33:53 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 0.9ms | Allocations: 533)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 8038)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 13:34:28 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 1.1ms | Allocations: 706)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 9109)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 13:34:31 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 0.9ms | Allocations: 533)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 8038)
+
+
+Started GET "/main" for ::1 at 2021-02-20 13:34:33 +0300
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 827)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 8491)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 13:34:35 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 1.0ms | Allocations: 533)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 8038)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 13:37:54 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 1.2ms | Allocations: 706)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 9114)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 13:37:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/main/elections"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/main/elections" for ::1 at 2021-02-20 13:38:14 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.3ms | Allocations: 675)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 8409)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 13:39:29 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.1ms | Allocations: 661)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 9069)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 13:40:10 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.1ms | Allocations: 669)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 9073)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 13:40:38 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.3ms | Allocations: 661)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 9067)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 13:41:48 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.2ms | Allocations: 685)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 9089)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 13:42:56 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.1ms | Allocations: 687)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 9088)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 13:43:19 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.2ms | Allocations: 687)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 9091)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:03:44 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.5ms | Allocations: 695)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 9107)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:07:35 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.6ms | Allocations: 708)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 9112)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:08:30 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.1ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 9127)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:09:32 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.2ms | Allocations: 687)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 9094)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:11:32 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.2ms | Allocations: 687)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 9089)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:12:42 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.1ms | Allocations: 687)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 9096)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:13:37 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.1ms | Allocations: 690)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 9091)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:14:16 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.1ms | Allocations: 690)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 9098)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:14:40 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.2ms | Allocations: 690)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 9099)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:15:01 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.4ms | Allocations: 702)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 9110)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:15:18 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 14.6ms | Allocations: 715)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 9131)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:15:40 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.2ms | Allocations: 533)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 8045)
+
+
+Started GET "/main/verifiable" for ::1 at 2021-02-20 14:15:43 +0300
+Processing by MainController#verifiable as HTML
+  Rendering main/verifiable.html.erb within layouts/application
+  Rendered main/verifiable.html.erb within layouts/application (Duration: 1.8ms | Allocations: 705)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 8323)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:15:43 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.3ms | Allocations: 533)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 8035)
+
+
+Started GET "/main/elections" for ::1 at 2021-02-20 14:16:27 +0300
+Processing by MainController#elections as HTML
+  Rendering main/elections.html.erb within layouts/application
+  Rendered main/elections.html.erb within layouts/application (Duration: 1.2ms | Allocations: 701)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 9112)
+
+
