@@ -1,2 +1,24 @@
-# vmv
- Verify My Vote: A front-end e-voting model which utilizes Blockchain technology to provide voters with ability to check the correctness and validity of their cast votes. VMV relies on Verificatum mix-net for maintaining and generating the underneath cryptographic credentials.
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
