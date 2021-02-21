@@ -1,0 +1,72 @@
+<br><br><br><br>
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="navbar-collapse collapse" id="navbar2">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="/admin/dashboard">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/admin/newElection">New Election</a></li>
+        <li class="nav-item" ><a class="nav-link" href="/admin/elections">Elections</a></li>
+       </ul>
+      <ul class="navbar-nav">
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <div class="jumbotron bg-white border mb-0 py-5">
+    <h3 class="text-center">New Election</h3>
+    <br>
+    <form class="new_election" id="new_election" role="form" accept-charset="UTF-8" method="post" action="newElection">
+      <input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="24WDNQTSKpoJlm6f04R5RDmnXOnhZLXc+KoachlaS/TLK4M7KSARYaguATdBfwy36AUNaYBiMiKom4CkL+Xuhw==">
+      <div class="form-group row">
+        <label class="required col-form-label col-sm-3 required" for="election_id">Election ID:</label>
+        <div class="col-sm-5">
+          <input autofocus="autofocus" title="Please Enter the unique ID for this Election " required="required" class="form-control" type="text" name="election[id]" id="election_id">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="required col-form-label col-sm-3 required" for="election_name">Election Name:</label>
+        <div class="col-sm-5">
+          <input autofocus="autofocus" title="Please Enter the name of this Election " required="required" class="form-control" type="text" name="election[name]" id="election_name">
+        </div>
+      </div>
+      <div class="form-group row">
+      <label class="required col-form-label col-sm-3 required" for="election_sdate">Start Date:</label>
+      <div class="col-sm-5">
+        <input autofocus="autofocus" title="The Election start date " required="required" class="form-control" type="text" name="election[sdate]" id="election_sdate">
+      </div>
+    </div>
+      <div class="form-group row">
+        <label class="required col-form-label col-sm-3 required" for="election_location">Location:</label>
+        <div class="col-sm-5">
+          <input autofocus="autofocus" title="The Election location " required="required" class="form-control" type="text" name="election[location]" id="election_location">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-9 offset-sm-3">
+        
+        </div>
+      </div>
+      <div class="form-group row">
+        
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-9 offset-sm-3">
+          <%= button_to "Generate", {:controller => :admin, :action => :newElection}, class: "btn btn-primary"%>
+
+        </div>
+      </div>
+    </form>
+
+
+  </div>
+
+
+</div>

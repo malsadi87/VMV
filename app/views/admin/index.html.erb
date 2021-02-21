@@ -1,0 +1,70 @@
+<br><br><br><br><br><br>
+
+
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="jumbotron bg-white border mb-0 py-5">
+
+
+    <h1>Login</h1>
+    <p>Please Sign In here:</p>
+    <form class="new_user" id="new_user" role="form" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="24WDNQTSKpoJlm6f04R5RDmnXOnhZLXc+KoachlaS/TLK4M7KSARYaguATdBfwy36AUNaYBiMiKom4CkL+Xuhw==">
+      <div class="form-group row">
+        <label class="required col-form-label col-sm-3 required" for="user_email">Email(*)</label>
+        <div class="col-sm-5">
+          <input autofocus="autofocus" title="Email address." required="required" class="form-control" type="email" value="" name="user[email]" id="user_email">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="required col-form-label col-sm-3 required" for="user_password">Password(*)</label>
+        <div class="col-sm-5">
+          <input title="The password associated with the email address.  This must include at least one lowercase letter, one uppercase letter, one digit and be at least eight characters long." required="required" class="form-control" type="password" name="user[password]" id="user_password">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-9 offset-sm-3">
+          <!--<div class="form-check">
+            <input name="user[remember_me]" type="hidden" value="0"><input title="By ticking this box, we will use a cookie to keep you logged in on this computer." class="form-check-input" type="checkbox" value="1" checked="checked" name="user[remember_me]" id="user_remember_me"><label class="form-check-label" for="user_remember_me">Keep
+            me logged in</label></div> -->
+        </div>
+      </div>
+      <div class="form-group row">
+        <!-- <div class="col-sm-9 offset-sm-3"><span>* denotes a mandatory field.</span>
+         </div> -->
+       </div>
+       <div class="form-group row">
+         <div class="col-sm-9 offset-sm-3">
+           <!--<input type="submit" name="commit" value="Login" class="btn btn-primary" data-disable-with="Login"> -->
+           <%= button_to "Login", {:controller => :admin, :action => :index}, class: "btn btn-primary"%>
+
+         </div>
+       </div>
+     </form>
+     <br>
+      <% flash.each do |key, value| %>
+        <% if key=='success' %>
+        <div class="alert alert-success" role="alert">
+          <%= value %>
+        </div>
+          <% else %>
+          <div class="alert alert-danger" role="alert">
+            <%= value %>
+          </div>
+      <% end %>
+      <% end %>
+      <br>
+     </div>
+     </div>

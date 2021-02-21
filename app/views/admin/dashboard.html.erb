@@ -1,0 +1,39 @@
+<br><br><br><br><br><br>
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="navbar-collapse collapse" id="navbar2">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="/admin/dashboard">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/admin/newElection">New Election</a></li>
+        <li class="nav-item" ><a class="nav-link" href="/admin/elections">Elections</a></li>
+       </ul>
+      <ul class="navbar-nav">
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="jumbotron bg-white border mb-0 py-5">
+
+
+    <h3 class="text-center">Admin Dashboard</h3>
+    <p>Select and action</p>
+     <ul>
+     <li>     <%= link_to "Generate New Election", {:controller => :admin, :action => :newElection}, class: "btn btn-default"  %>
+ </li>
+     <li>    <%= link_to "View Elections", {:controller => :admin, :action => :elections}, class: "btn btn-default"  %>
+</li>
+     </ul>
+
+
+
+  </div>
+
+
+</div>
