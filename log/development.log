@@ -2057,3 +2057,874 @@ Processing by AdminController#elections as HTML
 Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 8712)
 
 
+Started GET "/admin/dashboard?name=admin%40admin.com" for ::1 at 2021-02-21 11:39:56 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#dashboard as HTML
+  Parameters: {"name"=>"admin@admin.com"}
+Redirected to http://localhost:3000/admin/index
+Filter chain halted as :check_admin_session rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms | Allocations: 525)
+
+
+Started GET "/admin/index" for ::1 at 2021-02-21 11:39:56 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 63.0ms | Allocations: 10642)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 95.1ms | ActiveRecord: 0.0ms | Allocations: 21377)
+
+
+Started GET "/" for ::1 at 2021-02-21 11:46:14 +0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.1ms | Allocations: 317)
+Completed 200 OK in 21ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 1802)
+
+
+Started GET "/admin/index" for ::1 at 2021-02-21 11:46:15 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 46.4ms | Allocations: 10523)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 65.3ms | ActiveRecord: 0.0ms | Allocations: 21628)
+
+
+Started POST "/admin/index" for ::1 at 2021-02-21 11:46:19 +0300
+Processing by AdminController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I2Xq5MZUcFPR5czCKM/8qf5uOU0r2sKtHabR9Nsw4azIbaVRD6icpVpSg0VZaJEi7PjNo8WMIELxEmn0Kmk/Hw==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 378)
+
+
+Started GET "/admin/index" for ::1 at 2021-02-21 11:46:19 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 750)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 8767)
+
+
+Started POST "/admin/index" for ::1 at 2021-02-21 11:46:34 +0300
+Processing by AdminController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wpN7SfvA5srlZ0GDfw/OpEj06VaWPDlV+ilAUJfJXXspmzT8MjwKPG7QDgQOqKMvWmIduHhq27oWnfhQZpCDyA==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+Redirected to http://localhost:3000/admin/dashboard?name=admin%40admin.com
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 448)
+
+
+Started GET "/admin/dashboard?name=admin%40admin.com" for ::1 at 2021-02-21 11:46:34 +0300
+Processing by AdminController#dashboard as HTML
+  Parameters: {"name"=>"admin@admin.com"}
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (Duration: 1.8ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 9136)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 15:31:34 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#elections as HTML
+Redirected to http://localhost:3000/admin/index
+Filter chain halted as :check_admin_session rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms | Allocations: 519)
+
+
+Started GET "/admin/index" for ::1 at 2021-02-21 15:31:34 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 66.2ms | Allocations: 10643)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 92.9ms | ActiveRecord: 0.0ms | Allocations: 20833)
+
+
+Started POST "/admin/index" for ::1 at 2021-02-21 15:31:41 +0300
+Processing by AdminController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P9/hiAxKz7pJ+9s60U9yGJ9DtnxA3RhAPh9ATw12aQsGBQQuiHejGfo52n1GrOEVIcY+JpoOOzhBop5X6e+HVA==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+Redirected to http://localhost:3000/admin/dashboard?name=admin%40admin.com
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 1031)
+
+
+Started GET "/admin/dashboard?name=admin%40admin.com" for ::1 at 2021-02-21 15:31:41 +0300
+Processing by AdminController#dashboard as HTML
+  Parameters: {"name"=>"admin@admin.com"}
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (Duration: 3.8ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms | Allocations: 9098)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 15:31:43 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1365)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 9573)
+
+
+Started GET "/admin/startElection?election=DemElection" for ::1 at 2021-02-21 15:31:54 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"DemElection"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.5ms | Allocations: 172)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 16.5ms | Allocations: 8072)
+UserMailer#welcome_email: processed outbound mail in 19.7ms
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.0ms | Allocations: 35866)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `helpers' for #<#<Class:0x00007ffded596a80>:0x00007ffded5a4ec8>
+Did you mean?  headers):
+     9:   Welcome to Verify My Vote. This email contains :
+    10: </p>
+    11: <ol>
+    12:   <li> Beta commitment value <br /> <%= helpers.getBeta %></li>
+    13:   <li> Eight-digits Login code  <br /> <%= helpers.getCode %></li>
+    14: </ol>
+    15: 
+  
+app/views/user_mailer/welcome_email.text.erb:12
+app/mailers/user_mailer.rb:8:in `welcome_email'
+app/controllers/admin_controller.rb:57:in `block in startElection'
+app/controllers/admin_controller.rb:47:in `startElection'
+Started GET "/admin/elections" for ::1 at 2021-02-21 15:32:37 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1311)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 9574)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 15:32:39 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.2ms | Allocations: 841)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 8899)
+
+
+Started GET "/admin/startElection?election=DemElection" for ::1 at 2021-02-21 15:32:43 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"DemElection"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 12)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 11.6ms | Allocations: 6834)
+UserMailer#welcome_email: processed outbound mail in 13.4ms
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 12672)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `helpers' for #<#<Class:0x00007ffded6a6998>:0x00007ffded6b6910>
+Did you mean?  headers):
+     9:   Welcome to Verify My Vote. This email contains :
+    10: </p>
+    11: <ol>
+    12:   <li> Beta commitment value <br /> <%= helpers.getBeta %></li>
+    13:   <li> Eight-digits Login code  <br /> <%= helpers.getCode %></li>
+    14: </ol>
+    15: 
+  
+app/views/user_mailer/welcome_email.text.erb:12
+app/mailers/user_mailer.rb:8:in `welcome_email'
+app/controllers/admin_controller.rb:58:in `block in startElection'
+app/controllers/admin_controller.rb:48:in `startElection'
+Started GET "/admin/startElection?election=DemElection" for ::1 at 2021-02-21 15:38:25 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"DemElection"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.5ms | Allocations: 287)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 11.3ms | Allocations: 7442)
+UserMailer#welcome_email: processed outbound mail in 15.0ms
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms | Allocations: 24861)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `helpers' for #<#<Class:0x00007ffd324d8960>:0x00007ffd2b211a80>
+Did you mean?  headers):
+     9:   Welcome to Verify My Vote. This email contains :
+    10: </p>
+    11: <ol>
+    12:   <li> Beta commitment value <br /> <%= helpers.getBeta %></li>
+    13:   <li> Eight-digits Login code  <br /> <%= helpers.getCode %></li>
+    14: </ol>
+    15: 
+  
+app/views/user_mailer/welcome_email.text.erb:12
+app/mailers/user_mailer.rb:8:in `welcome_email'
+app/controllers/admin_controller.rb:58:in `block in startElection'
+app/controllers/admin_controller.rb:48:in `startElection'
+Started GET "/admin/elections" for ::1 at 2021-02-21 15:38:30 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 26.3ms | Allocations: 10802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.0ms | Allocations: 20273)
+
+
+Started GET "/admin/startElection?election=DemElection" for ::1 at 2021-02-21 15:38:33 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"DemElection"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 13)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 21.9ms | Allocations: 6827)
+UserMailer#welcome_email: processed outbound mail in 23.5ms
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 9620)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `helpers' for #<#<Class:0x00007ffd324d8960>:0x00007ffd2e94fd30>
+Did you mean?  headers):
+     9:   Welcome to Verify My Vote. This email contains :
+    10: </p>
+    11: <ol>
+    12:   <li> Beta commitment value <br /> <%= helpers.getBeta %></li>
+    13:   <li> Eight-digits Login code  <br /> <%= helpers.getCode %></li>
+    14: </ol>
+    15: 
+  
+app/views/user_mailer/welcome_email.text.erb:12
+app/mailers/user_mailer.rb:8:in `welcome_email'
+app/controllers/admin_controller.rb:58:in `block in startElection'
+app/controllers/admin_controller.rb:48:in `startElection'
+Started GET "/admin/index" for ::1 at 2021-02-21 15:39:59 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 28.0ms | Allocations: 10654)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 47.2ms | ActiveRecord: 0.0ms | Allocations: 20945)
+
+
+Started POST "/admin/index" for ::1 at 2021-02-21 15:40:05 +0300
+Processing by AdminController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/TJuOZ88SN9h/ZXRMrdM/tt3Pxdd+SEqCp7JyWbYnn3E6IufGwEkfNI/lJalVN/zZfK3TYcqAlJ1IxfRgkFwIg==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+Redirected to http://localhost:3000/admin/dashboard?name=admin%40admin.com
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1055)
+
+
+Started GET "/admin/dashboard?name=admin%40admin.com" for ::1 at 2021-02-21 15:40:05 +0300
+Processing by AdminController#dashboard as HTML
+  Parameters: {"name"=>"admin@admin.com"}
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (Duration: 2.0ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 9137)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 15:40:07 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1365)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 9573)
+
+
+Started GET "/admin/startElection?election=DemElection" for ::1 at 2021-02-21 15:40:09 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"DemElection"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.5ms | Allocations: 167)
+UserMailer#welcome_email: processed outbound mail in 4.9ms
+Delivered mail 603254a99dd8e_11c13fcad5137b0039727@mohammeds-mbp.mail (6.3ms)
+Date: Sun, 21 Feb 2021 15:40:09 +0300
+From: voteverify20@gmail.com
+To: m.alsadi@surrey.ac.uk
+Message-ID: <603254a99dd8e_11c13fcad5137b0039727@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Voter,
+
+Welcome to Verify My Vote. This email contains :
+
+1) Beta commitment value.
+344411337903805420292474429522100202998751647609878202140833563482848508720012604009791004432252591635916482207599005587066653070832025401923437142210326007090211210621212473907711685863765781810821847244025593998544738341574724072355609650420952516621507268359470722653286800042644982105376031226620993580325349282116811438781517003854923179636950063695794303072742452451140333650198906121546856012715710918066136183653974700347974615376048112095455941487970016652626417876290335311727173646840670338659366884315508954148162837078393349370287993893712098526874487734671702360255022212604922222688468999997868251792874543803479945711473097445848743461569300604185485863861658854441539918926163008518782029086144388158673270926755008335753797532218242610329650389426657201190909235241352603093453935890748821574584676435072793312524504588010379207387384265562650110779031432720754594079346652339630319234083064326729661493897
+
+2) Eight-digits login code
+38122694
+
+
+Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+
+
+You can login to the VMV system using the following link
+http://localhost:3000/voter/login?election=DemElection
+
+
+Thanks for joining and have a great day!
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/elections
+Completed 302 Found in 34ms (ActiveRecord: 0.0ms | Allocations: 18179)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 15:40:09 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.4ms | Allocations: 852)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 8939)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 15:51:09 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#elections as HTML
+Redirected to http://localhost:3000/admin/index
+Filter chain halted as :check_admin_session rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 517)
+
+
+Started GET "/admin/index" for ::1 at 2021-02-21 15:51:10 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 51.6ms | Allocations: 10643)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 0.0ms | Allocations: 20828)
+
+
+Started POST "/admin/index" for ::1 at 2021-02-21 15:51:16 +0300
+Processing by AdminController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H8eaEYoOgaw+uRd9cp5SX3DWVEesnEOyuQbVKBSnVOum3WisxomQx65ExWv9zR8LRhIvMb2iOrt1yOK/zhbhKg==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+Redirected to http://localhost:3000/admin/dashboard?name=admin%40admin.com
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 429)
+
+
+Started GET "/admin/dashboard?name=admin%40admin.com" for ::1 at 2021-02-21 15:51:16 +0300
+Processing by AdminController#dashboard as HTML
+  Parameters: {"name"=>"admin@admin.com"}
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (Duration: 1.9ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 9092)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 15:51:17 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1365)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 9575)
+
+
+Started GET "/admin/startElection?election=DemElection" for ::1 at 2021-02-21 15:51:20 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"DemElection"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 1.1ms | Allocations: 167)
+UserMailer#welcome_email: processed outbound mail in 4.7ms
+Delivered mail 60325748a2c78_13033fe0a24c70a87871b@mohammeds-mbp.mail (949.0ms)
+Date: Sun, 21 Feb 2021 15:51:20 +0300
+From: voteverify20@gmail.com
+To: m.alsadi@surrey.ac.uk
+Message-ID: <60325748a2c78_13033fe0a24c70a87871b@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Voter,
+
+Welcome to Verify My Vote. This email contains :
+
+1) Beta commitment value.
+344411337903805420292474429522100202998751647609878202140833563482848508720012604009791004432252591635916482207599005587066653070832025401923437142210326007090211210621212473907711685863765781810821847244025593998544738341574724072355609650420952516621507268359470722653286800042644982105376031226620993580325349282116811438781517003854923179636950063695794303072742452451140333650198906121546856012715710918066136183653974700347974615376048112095455941487970016652626417876290335311727173646840670338659366884315508954148162837078393349370287993893712098526874487734671702360255022212604922222688468999997868251792874543803479945711473097445848743461569300604185485863861658854441539918926163008518782029086144388158673270926755008335753797532218242610329650389426657201190909235241352603093453935890748821574584676435072793312524504588010379207387384265562650110779031432720754594079346652339630319234083064326729661493897
+
+2) Eight-digits login code
+38122694
+
+
+Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+
+
+You can login to the VMV system using the following link
+http://localhost:3000/voter/login?election=DemElection
+
+
+Thanks for joining and have a great day!
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/elections
+Completed 302 Found in 993ms (ActiveRecord: 0.0ms | Allocations: 18212)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 15:51:21 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.3ms | Allocations: 852)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 8945)
+
+
+Started GET "/admin/startElection?election=DemElection" for ::1 at 2021-02-21 15:53:24 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"DemElection"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 13)
+UserMailer#welcome_email: processed outbound mail in 1.0ms
+Delivered mail 603257c423c35_13033fe0a24ce2f4788ca@mohammeds-mbp.mail (1686.5ms)
+Date: Sun, 21 Feb 2021 15:53:24 +0300
+From: voteverify20@gmail.com
+To: m.alsadi@surrey.ac.uk
+Message-ID: <603257c423c35_13033fe0a24ce2f4788ca@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Voter,
+
+Welcome to Verify My Vote. This email contains :
+
+1) Beta commitment value.
+344411337903805420292474429522100202998751647609878202140833563482848508720012604009791004432252591635916482207599005587066653070832025401923437142210326007090211210621212473907711685863765781810821847244025593998544738341574724072355609650420952516621507268359470722653286800042644982105376031226620993580325349282116811438781517003854923179636950063695794303072742452451140333650198906121546856012715710918066136183653974700347974615376048112095455941487970016652626417876290335311727173646840670338659366884315508954148162837078393349370287993893712098526874487734671702360255022212604922222688468999997868251792874543803479945711473097445848743461569300604185485863861658854441539918926163008518782029086144388158673270926755008335753797532218242610329650389426657201190909235241352603093453935890748821574584676435072793312524504588010379207387384265562650110779031432720754594079346652339630319234083064326729661493897
+
+2) Eight-digits login code
+38122694
+
+
+Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+
+
+You can login to the VMV system using the following link
+http://localhost:3000/voter/login?election=DemElection
+
+
+Thanks for joining and have a great day!
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/elections
+Completed 302 Found in 1692ms (ActiveRecord: 0.0ms | Allocations: 4909)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 15:53:25 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.7ms | Allocations: 844)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 8924)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 15:55:28 +0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 51.4ms | Allocations: 10931)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 74.7ms | ActiveRecord: 0.0ms | Allocations: 21338)
+
+
+Started GET "/admin/startElection?election=DemElection" for ::1 at 2021-02-21 15:55:31 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"DemElection"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.8ms | Allocations: 167)
+UserMailer#welcome_email: processed outbound mail in 4.2ms
+Delivered mail 603258442c22_138e3fd4e889da1c44c@mohammeds-mbp.mail (1167.0ms)
+Date: Sun, 21 Feb 2021 15:55:32 +0300
+From: voteverify20@gmail.com
+To: m.alsadi@surrey.ac.uk
+Message-ID: <603258442c22_138e3fd4e889da1c44c@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Voter,
+
+Welcome to Verify My Vote. This email contains :
+
+1) Beta commitment value.
+344411337903805420292474429522100202998751647609878202140833563482848508720012604009791004432252591635916482207599005587066653070832025401923437142210326007090211210621212473907711685863765781810821847244025593998544738341574724072355609650420952516621507268359470722653286800042644982105376031226620993580325349282116811438781517003854923179636950063695794303072742452451140333650198906121546856012715710918066136183653974700347974615376048112095455941487970016652626417876290335311727173646840670338659366884315508954148162837078393349370287993893712098526874487734671702360255022212604922222688468999997868251792874543803479945711473097445848743461569300604185485863861658854441539918926163008518782029086144388158673270926755008335753797532218242610329650389426657201190909235241352603093453935890748821574584676435072793312524504588010379207387384265562650110779031432720754594079346652339630319234083064326729661493897
+
+2) Eight-digits login code
+38122694
+
+
+Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+
+
+You can login to the VMV system using the following link
+http://localhost:3000/voter/login?election=DemElection
+
+
+Thanks for joining and have a great day!
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/elections
+Completed 302 Found in 1211ms (ActiveRecord: 0.0ms | Allocations: 18231)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 15:55:33 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.4ms | Allocations: 851)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 8938)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 16:01:45 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#elections as HTML
+Redirected to http://localhost:3000/admin/index
+Filter chain halted as :check_admin_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started GET "/admin/index" for ::1 at 2021-02-21 16:01:45 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1095)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 9225)
+
+
+Started POST "/admin/index" for ::1 at 2021-02-21 16:01:56 +0300
+Processing by AdminController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AD0NUmSdypIYtxfSsNKUwcnr+1S1RWXWrrEaJEny00rHxd/Mkl4kuBd0mtT4MICNU1r/qmEuvNY85amnkpuEBg==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+Redirected to http://localhost:3000/admin/dashboard?name=admin%40admin.com
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 427)
+
+
+Started GET "/admin/dashboard?name=admin%40admin.com" for ::1 at 2021-02-21 16:01:56 +0300
+Processing by AdminController#dashboard as HTML
+  Parameters: {"name"=>"admin@admin.com"}
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (Duration: 1.9ms | Allocations: 939)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 9102)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 16:01:57 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.6ms | Allocations: 840)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 8899)
+
+
+Started GET "/admin/startElection?election=DemElection" for ::1 at 2021-02-21 16:01:58 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"DemElection"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 13)
+UserMailer#welcome_email: processed outbound mail in 1.3ms
+Delivered mail 603259c6db59f_138e3fd4e889d5e4559@mohammeds-mbp.mail (1761.6ms)
+Date: Sun, 21 Feb 2021 16:01:58 +0300
+From: voteverify20@gmail.com
+To: m.alsadi@surrey.ac.uk
+Message-ID: <603259c6db59f_138e3fd4e889d5e4559@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    Dear Voter,
+
+Welcome to Verify My Vote. This email contains :
+
+1) Beta commitment value.
+344411337903805420292474429522100202998751647609878202140833563482848508720012604009791004432252591635916482207599005587066653070832025401923437142210326007090211210621212473907711685863765781810821847244025593998544738341574724072355609650420952516621507268359470722653286800042644982105376031226620993580325349282116811438781517003854923179636950063695794303072742452451140333650198906121546856012715710918066136183653974700347974615376048112095455941487970016652626417876290335311727173646840670338659366884315508954148162837078393349370287993893712098526874487734671702360255022212604922222688468999997868251792874543803479945711473097445848743461569300604185485863861658854441539918926163008518782029086144388158673270926755008335753797532218242610329650389426657201190909235241352603093453935890748821574584676435072793312524504588010379207387384265562650110779031432720754594079346652339630319234083064326729661493897
+
+2) Eight-digits login code
+38122694
+
+
+Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+
+
+You can login to the VMV system using the following link
+http://localhost:3000/voter/login?election=DemElection
+
+
+Thanks for joining and have a great day!
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/elections
+Completed 302 Found in 1767ms (ActiveRecord: 0.0ms | Allocations: 6080)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 16:02:00 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.3ms | Allocations: 844)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 8920)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 16:12:02 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#elections as HTML
+Redirected to http://localhost:3000/admin/index
+Filter chain halted as :check_admin_session rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 1322)
+
+
+Started GET "/admin/index" for ::1 at 2021-02-21 16:12:02 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1059)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 10390)
+
+
+Started POST "/admin/index" for ::1 at 2021-02-21 16:12:07 +0300
+Processing by AdminController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MNdaqqHbG/DBxe7lxVj0N5WbtSRCx/98RQCZiPzyJ7tKIiFGjmLWIuKOxKhQLgm+OTOiYOYEzf10orhGUeQu+Q==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+Redirected to http://localhost:3000/admin/dashboard?name=admin%40admin.com
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 424)
+
+
+Started GET "/admin/dashboard?name=admin%40admin.com" for ::1 at 2021-02-21 16:12:07 +0300
+Processing by AdminController#dashboard as HTML
+  Parameters: {"name"=>"admin@admin.com"}
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (Duration: 3.8ms | Allocations: 909)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 9070)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 16:12:08 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1309)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.0ms | Allocations: 9513)
+
+
+Started GET "/admin/startElection?election=DemElection" for ::1 at 2021-02-21 16:12:09 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"DemElection"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.3ms | Allocations: 177)
+UserMailer#welcome_email: processed outbound mail in 3.4ms
+Delivered mail 60325c29bbb57_138e3fd4e889d47c650@mohammeds-mbp.mail (2420.9ms)
+Date: Sun, 21 Feb 2021 16:12:09 +0300
+From: voteverify20@gmail.com
+To: m.alsadi@surrey.ac.uk
+Message-ID: <60325c29bbb57_138e3fd4e889d47c650@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h3>Dear Voter</h3>
+    <p>
+      Welcome to Verify My Vote. This email contains :
+    .<br>
+    </p>
+    <ul>
+    <li> Beta commitment value </li>
+    </ul>
+    <p>344411337903805420292474429522100202998751647609878202140833563482848508720012604009791004432252591635916482207599005587066653070832025401923437142210326007090211210621212473907711685863765781810821847244025593998544738341574724072355609650420952516621507268359470722653286800042644982105376031226620993580325349282116811438781517003854923179636950063695794303072742452451140333650198906121546856012715710918066136183653974700347974615376048112095455941487970016652626417876290335311727173646840670338659366884315508954148162837078393349370287993893712098526874487734671702360255022212604922222688468999997868251792874543803479945711473097445848743461569300604185485863861658854441539918926163008518782029086144388158673270926755008335753797532218242610329650389426657201190909235241352603093453935890748821574584676435072793312524504588010379207387384265562650110779031432720754594079346652339630319234083064326729661493897<br></p>
+    <ul>
+    <li> Eight-digits login code </li>
+    </ul>
+    <p>38122694<br></p>
+    <p>
+      To login to the site, just follow this link: http://localhost:3000/voter/login?election=DemElection.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/elections
+Completed 302 Found in 2428ms (ActiveRecord: 0.0ms | Allocations: 6727)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 16:12:12 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.2ms | Allocations: 851)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 8940)
+
+
+Started GET "/admin/startElection?election=DemElection" for ::1 at 2021-02-21 16:14:11 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"DemElection"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.4ms | Allocations: 184)
+UserMailer#welcome_email: processed outbound mail in 2.5ms
+Delivered mail 60325ca36b430_138e3fd4e889d508749@mohammeds-mbp.mail (1586.3ms)
+Date: Sun, 21 Feb 2021 16:14:11 +0300
+From: voteverify20@gmail.com
+To: m.alsadi@surrey.ac.uk
+Message-ID: <60325ca36b430_138e3fd4e889d508749@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h4>Dear Voter</h4>
+    <p>
+      Welcome to Verify My Vote. This email contains :
+    .<br>
+    </p>
+    <ul>
+    <li> Beta commitment value </li>
+    </ul>
+    <p>344411337903805420292474429522100202998751647609878202140833563482848508720012604009791004432252591635916482207599005587066653070832025401923437142210326007090211210621212473907711685863765781810821847244025593998544738341574724072355609650420952516621507268359470722653286800042644982105376031226620993580325349282116811438781517003854923179636950063695794303072742452451140333650198906121546856012715710918066136183653974700347974615376048112095455941487970016652626417876290335311727173646840670338659366884315508954148162837078393349370287993893712098526874487734671702360255022212604922222688468999997868251792874543803479945711473097445848743461569300604185485863861658854441539918926163008518782029086144388158673270926755008335753797532218242610329650389426657201190909235241352603093453935890748821574584676435072793312524504588010379207387384265562650110779031432720754594079346652339630319234083064326729661493897<br></p>
+    <ul>
+    <li> Eight-digits login code </li>
+    </ul>
+    <p>38122694<br></p>
+    <p>
+      To login to the site, just follow this link: <a href="http://localhost:3000/voter/login?election=DemElection">http://localhost:3000/voter/login?election=DemElection</a>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/elections
+Completed 302 Found in 1592ms (ActiveRecord: 0.0ms | Allocations: 6878)
+
+
+Started GET "/admin/elections" for ::1 at 2021-02-21 16:14:13 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1312)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 10164)
+
+
+Started GET "/voter/login?election=DemElection" for ::1 at 2021-02-21 16:15:08 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/voter/login"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'

@@ -1,5 +1,6 @@
 class AdminController < ApplicationController
   include BlockchainHelper
+  include ApplicationHelper
 
   before_action :check_admin_session, except: [:index]
 
@@ -9,7 +10,7 @@ class AdminController < ApplicationController
     if !@user.nil?
       @email = @user[:email]
       @pass = @user[:password]
-      if @email == "admin@admin.com" && @pass == "password"
+      if @email == Rails.application.credentials.admin[:email] && @pass == Rails.application.credentials.admin[:password]
         puts "Login success"
         session[:user]      = @email
         session[:expires_at] = Time.current + 10.minutes
@@ -35,10 +36,38 @@ class AdminController < ApplicationController
   end
 
   def startElection
+
+    require 'json'
+    require 'csv'
+
+    @VotersList = CSV.parse(File.read('public/files/voters.csv'), headers: true)
+    table = CSV.parse(File.read('public/files/ers-associated-voters.csv'), headers: true)
+
+    name = params[:election]
+
+    @VotersList.each do |voter|
+      puts "voter id = #{voter["id"]} and code = #{voter["code"]}"
+      voter_obj = table.select { |row| row['id'].to_i == voter["id"].to_i}
+
+      helpers.beta(voter_obj.first["beta"])
+      helpers.loglink("http://localhost:3000/voter/login?election=#{name}")
+      helpers.code(voter["code"])
+
+      ## Send an email with token to voters' email
+      if voter["id"] == "4"
+       UserMailer.welcome_email(voter["email"]).deliver
+      end
+    end
+
+    ## Generate OTPs and send them to voters phones
+    #helpers.send_otp
+
+    flash[:success] = 'Emails with login credential are sent to voters.'
+    redirect_to '/admin/elections'
+
   end
 
   def newElection
-
     @election = params[:election]
     if !@election.nil?
       require 'json'

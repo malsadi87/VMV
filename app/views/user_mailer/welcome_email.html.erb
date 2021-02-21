@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h4>Dear Voter,</h4>
+    <p>
+      Welcome to Verify My Vote. This email contains :
+    .<br>
+    </p>
+    <ul>
+    <li> Beta commitment value </li>
+    </ul>
+    <p><%= getBeta %><br></p>
+    <ul>
+    <li> Eight-digits login code </li>
+    </ul>
+    <p><%= getCode %><br></p>
+    <p>Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+<br></p>
+    <p>
+      To login to the site, just follow this link: <a href="<%= getLink %>"><%= getLink %></a>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
