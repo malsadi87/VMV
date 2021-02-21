@@ -1,0 +1,69 @@
+<br><br><br><br><br><br>
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    
+  </div>
+</nav>
+<div class="container">
+  <div class="jumbotron bg-white border mb-0 py-5">
+    <h3 class="text-center">Elections</h3>
+
+    <div class="container" id="list">
+
+      <div class="row">
+        <% for election in @parsed_json["elections"] %>
+        <div class="col-lg-4 col-md-6 col-12 my-3">
+          <div class="card text-black">
+            <div class="card-header d-flex justify-content-between">
+              <span><%= election["name"] %></span>
+              <div class="text-nowrap">
+              </div>
+
+            </div>
+            <div class="card-body px-0">
+
+              <p class="card-title d-flex flex-row rounded mx-1">
+                <span class="col-6 text-left">ID</span>
+                <span class="col-6 text-right"><%= election["id"] %></span>
+              </p>
+              <p class="card-title d-flex flex-row rounded mx-1">
+                <span class="col-6 text-left">Start Date</span>
+                <span class="col-6 text-right"><%= election["sdate"] %></span>
+              </p>
+              <p class="card-title d-flex flex-row rounded mx-1">
+                <span class="col-6 text-left">Location</span>
+                <span class="col-6 text-right"><%= election["location"] %></span>
+              </p>
+              <p class="card-title d-flex flex-row mb-0">
+                <span class="col text-center">
+                  <%= link_to 'Vote', {:controller => :voter, :action => :login, :election   => election["name"] }, class:"btn btn-secondary p-0 w-100" %>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <% end %>
+
+      </div>
+
+      <% flash.each do |key, value| %>
+        <% if key=='success' %>
+        <div class="alert alert-success" role="alert">
+          <%= value %>
+        </div>
+          <% else %>
+          <div class="alert alert-danger" role="alert">
+            <%= value %>
+          </div>
+      <% end %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  get 'voter/login'
+  get 'voter/elections'
+  get 'voter/ballot'
+  get 'voter/result'
+  get 'voter/verificationResult'
+  get 'voter/summary'
+  get 'voter/info'
+  get 'voter/logout'
+
+  #voter controller - POST
+  post "voter/login" => "voter#login"
+  post "voter/ballot" => "voter#summary"
+  post "voter/summary" => "voter#castVote"
+  post "voter/info" => "voter#info"
+  post "voter/logout" => "voter#logout"
+
+
   #admin controller - GET
   get "admin/index"
   get 'admin/dashboard'

@@ -1,0 +1,53 @@
+<br><br><br><br><br><br>
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    
+          <%= button_to "Logout", {:controller => :voter, :action => :logout}, {:class=> 'btn btn-outline-primary' ,:style => "float: right"}%>
+
+    
+  </div>
+</nav>
+<div class="container">
+  <div class="jumbotron bg-white border mb-0 py-5">
+    <% @election =  @parsed_json["elections"].detect { |obj| obj['name'] == @election_name} %>
+    <p class="lead my-0 text-center">
+    <h3> <%= @election["name"] %> Election</h3><br>
+    <p>
+      You have voted for the following candidate:
+    </p>
+    <br>
+    <table class="table" style="width: 200px;">
+      <thead>
+      <tr>
+        <th scope="col">Candidate Name</th>
+      </tr>
+      </thead>
+      <tbody>
+      <%  if !@checkes.nil? %>
+      <% @checkes.each do |id| %>
+        <% @candidate= @election["candidates"].detect { |obj| obj['id'] == id.to_i} %>
+        <tr>
+          <td style="color: blue;"><%= @candidate["name"] %></td>
+        </tr>
+      <% end %>
+      <%end %>
+      </tbody>
+    </table>
+    <br>
+    <hr>
+    <p>if this is correct, then click the 'Submit' button below. Otherwise, click 'Back' to change your vote. Once you submit, you can not change your vote.</p>
+    </p>
+    <div>
+      <%= link_to 'Back', 'javascript:history.back()', {:class=> 'btn btn-outline-secondary' ,:style => "float: left"} %>
+          <%= button_to "Submit", {:controller => :voter, :action => :castVote, :vote => @candidate["id"], :voter => params[:voter]}, {:class=> 'btn btn-outline-primary' ,:style => "float: right"}%>
+        
+    </div>
+    <br><br>
+  </div>
+</div>

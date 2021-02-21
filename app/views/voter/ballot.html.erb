@@ -1,0 +1,62 @@
+<br><br><br><br><br><br>
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+              <%= button_to "Logout", {:controller => :voter, :action => :logout}, {:class=> 'btn btn-outline-primary' ,:style => "float: right"}%>
+
+  </div>
+</nav>
+<div class="container">
+  <% for election in @parsed_json["elections"] %>
+    <% if election["name"] == params[:election] %>
+
+      <div class="jumbotron bg-white border mb-0 py-5">
+        <h3> <%= election["name"] %> Election</h3><br>
+        <p>
+          Description <br>
+        </p>
+        <br>
+        <% @candidates = election["candidates"] %>
+        <form  method="post">
+          <!--<input name="utf8" type="hidden" value="✓">-->
+          <!--<input type="hidden" name="authenticity_token" value="24WDNQTSKpoJlm6f04R5RDmnXOnhZLXc+KoachlaS/TLK4M7KSARYaguATdBfwy36AUNaYBiMiKom4CkL+Xuhw==">-->
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Candidate Name</th>
+              <th scope="col">Vote</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for candidate in @candidates %>
+              <tr>
+                <th scope="row"><%= candidate["id"] %></th>
+                <td><%= candidate["name"] %></td>
+                <td>
+                  <input type="radio" name="candidate[]" value= <%= candidate["id"] %>>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table> <br>
+
+          <%= button_to "Next", {:controller => :voter, :action => :summary, params: request.query_parameters}, class: "btn btn-primary"%>
+        </form>
+      </div>
+
+
+<% end %>
+  <% end %>
+
+
+
+    </div>
+
+
+

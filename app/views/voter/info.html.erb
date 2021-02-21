@@ -1,0 +1,37 @@
+<br><br><br><br><br><br>
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+              <%= button_to "Logout", {:controller => :voter, :action => :logout}, {:class=> 'btn btn-outline-primary' ,:style => "float: right"}%>
+
+  </div>
+</nav>
+<div class="container">
+  <div class="jumbotron bg-white border mb-0 py-5">
+
+      <h4 class="lead">There is a vote associated with you stored on the system. You can not vote more than once.</h4>
+      <br>
+      <p>
+        You can check the status of your vote using the link sent to your email.
+      </p>
+      <p>
+        You can see the results of the election from
+        <%= link_to "here", {:controller => :voter, :action => :result}  %>
+      </p>
+      <p>
+        If you want wish to verify your vote please use the link we have sent to your email.
+      </p>
+
+    <% flash.each do |key, value| %>
+      <div style="width:70%; align-self: center; align-items: center; align-content: center;" class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,39 @@
+<br><br><br><br><br><br>
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+              <%= button_to "Logout", {:controller => :voter, :action => :logout}, {:class=> 'btn btn-outline-primary' ,:style => "float: right"}%>
+
+  </div>
+</nav>
+<div class="container">
+      <div class="jumbotron bg-white border mb-0 py-5">
+        <h3>Election Results</h3><br>
+        <br>
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">Candidate</th>
+              <th scope="col">Frequency</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% if !@hash.nil? %>
+            <% @hash.each do |key,val| %>
+              <tr>
+                <td><%= key %></td>
+                <td><%= val %></td>
+
+              </tr>
+            <% end %>
+            <% end %>
+            </tbody>
+          </table> <br>
+
+      </div>
+</div>
