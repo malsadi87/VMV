@@ -10,7 +10,7 @@ class AdminController < ApplicationController
     if !@user.nil?
       @email = @user[:email]
       @pass = @user[:password]
-      if @email == Rails.application.credentials.admin[:email] && @pass == Rails.application.credentials.admin[:password]
+      if @email == Rails.application.credentials.admin.dig(:email) && @pass == Rails.application.credentials.admin.dig(:password)
         puts "Login success"
         session[:user]      = @email
         session[:expires_at] = Time.current + 10.minutes
