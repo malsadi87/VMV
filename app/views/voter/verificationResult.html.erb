@@ -1,2 +1,59 @@
-<h1>Voter#verificationResult</h1>
-<p>Find me in app/views/voter/verificationResult.html.erb</p>
+
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="/main">Home
+        </a></li><li class="nav-item"><a class="nav-link" href="/election/index">Elections
+      </a></li><li class="nav-item"><a class="nav-link" href="/main/verifiable">Verifiable Voting
+      </a></li></ul>
+      <ul class="navbar-nav">
+      </ul>
+    </div>
+  </div>
+</nav>
+<br> <br><br> <br>
+<div class="container">
+  <div class="jumbotron bg-white border mb-0 py-5">
+
+
+    <h3>Verify My Vote</h3>
+    <br>
+    
+    <% if @error.nil? %>
+        
+    <p>
+      This shows the vote as submitted to the voting system which matches the verification data you supplied:
+    </p>
+     <br>
+
+
+    <p> <b>Your Vote </b>: <%= @plainVote %></p> <br>
+    <p> <b>Your Tracker Number </b>: <%= @plainTrackerNumber %></p>
+    <br>
+
+    <div class="row align-items-start">
+
+      <p> You can view election data stored on Blockchain through :</p>
+      <ul>
+        <li><%= link_to 'Pre Election Data on BC', {:controller => :main, :action => :BCExplorer, :type => 1 } %></li>
+        <li><%= link_to 'Election Data on BC', {:controller => :main, :action => :BCExplorer, :type => 2 } %></li>
+        <li><%= link_to 'Post Election on BC', {:controller => :main, :action => :BCExplorer, :type => 3 } %></li>
+
+    </div>
+       
+    <% else %>
+         <h5><%= @error %></h5>
+    <%  end %>
+
+
+    </div>
+
+
+</div>

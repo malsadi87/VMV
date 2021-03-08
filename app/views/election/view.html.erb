@@ -1,0 +1,316 @@
+<br><br><br><br><br><br>
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top" style="background:white;">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="/main">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/election/index">Elections</a></li>
+        <li class="nav-item" ><a class="nav-link" href="/main/verifiable">Verifiable Voting</a></li>
+       </ul>
+      <ul class="navbar-nav">
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class='container'>
+  <div>
+      <h3 class="text-center">Elections</h3>
+      <br>
+<div>
+<h4>Election Setup</h4>
+<p>Created when the election is first setup:</p>
+
+
+<div class='row mb-4'>
+<div class="tableFixHead">
+<table class='table table-hover table-sm table-bordered'>
+<thead class='thead-light'>
+<tr>
+<th class='text-center'>File Type</th>
+<th class='text-center'>Description</th>
+</tr>
+</thead>
+<tbody>
+  <tr class=''>
+
+  <td>
+  <%= link_to 'Election Parameters', {:controller => :election, :action => :uploads,:title =>"Election Parameters", :id => @id, :file => "public-election-params" } %>
+  </td>
+  <td>Contains the public cryptographic parameters for the election.</td>
+  </tr>
+  <tr class=''>
+<td>
+  <%= link_to 'Election Public Key', {:controller => :election, :action => :uploads,:title =>"Election Public Key", :id => @id, :file => "public-election-keys-1" } %>
+</td>
+<td>Contains the public election encryption key used to encrypt all ballots in this election.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Election Public Key', {:controller => :election, :action => :uploads,:title =>"Election Public Key", :id => @id, :file => "public-election-keys-2" } %>
+</td>
+<td>Contains the public election encryption key used to encrypt all ballots in this election.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Election Public Key', {:controller => :election, :action => :uploads,:title =>"Election Public Key", :id => @id, :file => "public-election-keys-3" } %>
+</td>
+<td>Contains the public election encryption key used to encrypt all ballots in this election.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Election Public Key', {:controller => :election, :action => :uploads,:title =>"Election Public Key", :id => @id, :file => "public-election-keys-4" } %>
+</td>
+<td>Contains the public election encryption key used to encrypt all ballots in this election.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Tracker Numbers', {:controller => :election, :action => :uploads,:title =>"Tracker Numbers", :id => @id, :file => "public-tracker-numbers" } %>
+</td>
+<td>Contains the public plain text and encrypted tracker numbers used to allow a voter to verify their cast vote.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Shuffled and Encrypted Tracker Numbers', {:controller => :election, :action => :uploads,:title =>"Shuffled and Encrypted Tracker Numbers", :id => @id, :file => "shuffled-tracker-numbers-1" } %>
+</td>
+<td>Contains the public encrypted tracker numbers in a random order such that it is not possible to know which plain text tracker number will be associated with which voter.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Shuffled and Encrypted Tracker Numbers', {:controller => :election, :action => :uploads,:title =>"Shuffled and Encrypted Tracker Numbers", :id => @id, :file => "shuffled-tracker-numbers-2" } %>
+</td>
+<td>Contains the public encrypted tracker numbers in a random order such that it is not possible to know which plain text tracker number will be associated with which voter.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Shuffled and Encrypted Tracker Numbers', {:controller => :election, :action => :uploads,:title =>"Shuffled and Encrypted Tracker Numbers", :id => @id, :file => "shuffled-tracker-numbers-3" } %>
+</td>
+<td>Contains the public encrypted tracker numbers in a random order such that it is not possible to know which plain text tracker number will be associated with which voter.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Shuffled and Encrypted Tracker Numbers', {:controller => :election, :action => :uploads,:title =>"Shuffled and Encrypted Tracker Numbers", :id => @id, :file => "shuffled-tracker-numbers-4" } %>
+
+</td>
+<td>Contains the public encrypted tracker numbers in a random order such that it is not possible to know which plain text tracker number will be associated with which voter.</td>
+</tr>
+<tr class=''>
+<td> Shuffled and Encrypted Tracker Numbers Proofs
+</td>
+<td>Contains the Verificatum proof of shuffling of the public encrypted tracker numbers.</td>
+</tr>
+<tr class='' data-href='/uploads/248/contents'>
+<td>Shuffled and Encrypted Tracker Numbers Proofs</td>
+<td>Contains the Verificatum proof of shuffling of the public encrypted tracker numbers.</td>
+</tr>
+<tr class='' data-href='/uploads/250/contents'>
+<td>Shuffled and Encrypted Tracker Numbers Proofs</td>
+<td>Contains the Verificatum proof of shuffling of the public encrypted tracker numbers.</td>
+</tr>
+<tr class='' data-href='/uploads/251/contents'>
+<td>Shuffled and Encrypted Tracker Numbers Proofs</td>
+<td>Contains the Verificatum proof of shuffling of the public encrypted tracker numbers.</td>
+</tr>
+<tr class='' data-href='/uploads/274/contents'>
+<td>Vote Choices</td>
+<td>Contains the list of all possible choices that are available in the ballot.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</div>
+
+<div>
+<h4>Pre-election Voter Setup</h4>
+<p>Created when voters are allocated to the election:</p>
+
+
+<div class='row mb-4'>
+<div class="tableFixHead">
+<table class='table table-hover table-sm table-bordered'>
+<thead class='thead-light'>
+<tr>
+<th class='text-center'>File Type</th>
+<th class='text-center'>Description</th>
+</tr>
+</thead>
+<tr class=''>
+<td>
+<%= link_to 'Voter Public Keys', {:controller => :election, :action => :uploads,:title =>"Voter Public Keys", :id => @id, :file => "public-voters-keys" } %>
+</td>
+<td>Contains the public voter encryption and signing keys.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Teller Public Commitments', {:controller => :election, :action => :uploads,:title =>"Teller Public Commitments", :id => @id, :file => "public-commitments-1" } %>
+</td>
+<td>Contains the public encrypted commitment values for a specific teller. Each election uses a number of independent tellers to ensure anonymity of the data.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Teller Public Commitments', {:controller => :election, :action => :uploads,:title =>"Teller Public Commitments", :id => @id, :file => "public-commitments-2" } %>
+
+</td>
+<td>Contains the public encrypted commitment values for a specific teller. Each election uses a number of independent tellers to ensure anonymity of the data.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Teller Public Commitments', {:controller => :election, :action => :uploads,:title =>"Teller Public Commitments", :id => @id, :file => "public-commitments-3" } %>
+
+</td>
+<td>Contains the public encrypted commitment values for a specific teller. Each election uses a number of independent tellers to ensure anonymity of the data.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Teller Public Commitments', {:controller => :election, :action => :uploads,:title =>"Teller Public Commitments", :id => @id, :file => "public-commitments-1" } %>
+</td>
+<td>Contains the public encrypted commitment values for a specific teller. Each election uses a number of independent tellers to ensure anonymity of the data.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Teller Public Commitments Proofs', {:controller => :election, :action => :uploads,:title =>"Teller Public Commitments Proofs", :id => @id, :file => "commitments-proofs-1" } %>
+
+</td>
+<td>Contains the proof of knowledge of the commitment values for a specific teller. Each election uses a number of independent tellers to ensure anonymity of the data.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Teller Public Commitments Proofs', {:controller => :election, :action => :uploads,:title =>"Teller Public Commitments Proofs", :id => @id, :file => "commitments-proofs-2" } %>
+
+</td>
+<td>Contains the proof of knowledge of the commitment values for a specific teller. Each election uses a number of independent tellers to ensure anonymity of the data.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Teller Public Commitments Proofs', {:controller => :election, :action => :uploads,:title =>"Teller Public Commitments Proofs", :id => @id, :file => "commitments-proofs-3" } %>
+
+</td>
+<td>Contains the proof of knowledge of the commitment values for a specific teller. Each election uses a number of independent tellers to ensure anonymity of the data.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Teller Public Commitments Proofs', {:controller => :election, :action => :uploads,:title =>"Teller Public Commitments Proofs", :id => @id, :file => "commitments-proofs-4" } %>
+
+</td>
+<td>Contains the proof of knowledge of the commitment values for a specific teller. Each election uses a number of independent tellers to ensure anonymity of the data.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Voter Public Keys with Encrypted Tracker Numbers', {:controller => :election, :action => :uploads,:title =>"Voter Public Keys with Encrypted Tracker Numbers", :id => @id, :file => "public-voters-1" } %>
+
+</td>
+<td>Contains the list of voter public keys, encrypted tracker number and partial commitment ready to be linked to a voter.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Voter Public Keys with Encrypted Tracker Numbers', {:controller => :election, :action => :uploads,:title =>"Voter Public Keys with Encrypted Tracker Numbers", :id => @id, :file => "public-voters-2" } %>
+
+</td>
+<td>Contains the list of voter public keys, encrypted tracker number and partial commitment ready to be linked to a voter.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Voter Public Keys with Encrypted Tracker Numbers', {:controller => :election, :action => :uploads,:title =>"Voter Public Keys with Encrypted Tracker Numbers", :id => @id, :file => "public-voters-3" } %>
+
+</td>
+<td>Contains the list of voter public keys, encrypted tracker number and partial commitment ready to be linked to a voter.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Voter Public Keys with Encrypted Tracker Numbers', {:controller => :election, :action => :uploads,:title =>"Voter Public Keys with Encrypted Tracker Numbers", :id => @id, :file => "public-voters-4" } %>
+
+</td>
+<td>Contains the list of voter public keys, encrypted tracker number and partial commitment ready to be linked to a voter.</td>
+</tr>
+<tr class='' data-href='/uploads/271/contents'>
+<td>Voter Public Keys with Encrypted Tracker Numbers Proofs</td>
+<td>Contains the Verificatum proof of decryption of the partial commitment for each commitment ready to be linked to a voter.</td>
+</tr>
+<tr class='' data-href='/uploads/268/contents'>
+<td>Voter Public Keys with Encrypted Tracker Numbers Proofs</td>
+<td>Contains the Verificatum proof of decryption of the partial commitment for each commitment ready to be linked to a voter.</td>
+</tr>
+<tr class='' data-href='/uploads/269/contents'>
+<td>Voter Public Keys with Encrypted Tracker Numbers Proofs</td>
+<td>Contains the Verificatum proof of decryption of the partial commitment for each commitment ready to be linked to a voter.</td>
+</tr>
+<tr class='' data-href='/uploads/270/contents'>
+<td>Voter Public Keys with Encrypted Tracker Numbers Proofs</td>
+<td>Contains the Verificatum proof of decryption of the partial commitment for each commitment ready to be linked to a voter.</td>
+</tr>
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</div>
+
+<div>
+<h4>Post Election</h4>
+<p>Created after the election to encrypt votes and then publish anonymous decrypted votes:</p>
+
+
+<div class='row mb-4'>
+<div class="tableFixHead">
+<table class='table table-hover table-sm table-bordered'>
+<thead class='thead-light'>
+<tr>
+<th class='text-center'>File Type</th>
+<th class='text-center'>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class=''>
+<td>
+<%= link_to 'Encrypted Votes with Tracker Numbers', {:controller => :election, :action => :uploads,:title =>"Encrypted Votes with Tracker Numbers", :id => @id, :file => "public-encrypted-votes" } %>
+</td>
+<td>Contains the encrypted and signed vote for each voter together with their voter public keys, encrypted tracker number and partial commitment.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Encrypted Votes with Tracker Numbers Proofs', {:controller => :election, :action => :uploads,:title =>"Encrypted Votes with Tracker Numbers Proofs", :id => @id, :file => "encrypted-proofs" } %>
+</td>
+<td>Contains the proof of encryption of each encrypted vote for each voter. The values can be used with suitable cryptographic algorithms to verify that each vote was encrypted correctly.</td>
+</tr>
+<tr class=''>
+<td>
+<%= link_to 'Final Votes', {:controller => :election, :action => :uploads,:title =>"Final Votes", :id => @id, :file => "public-mixed-voters-1" } %>
+</td>
+<td>Contains the shuffled and decrypted list of all plain text votes cast and their associated tracker numbers. No identifying information about voters is included or was used during the shuffle and decryption.</td>
+</tr>
+<tr class='' data-href='/uploads/280/contents'>
+<td>Final Votes Proofs</td>
+<td>Contains the Verificatum proof of shuffling and decryption of the encrypted votes and encrypted tracker numbers.</td>
+</tr>
+<tr class='' data-href='/uploads/282/contents'>
+<td>Final Votes Proofs</td>
+<td>Contains the Verificatum proof of shuffling and decryption of the encrypted votes and encrypted tracker numbers.</td>
+</tr>
+<tr class='' data-href='/uploads/281/contents'>
+<td>Final Votes Proofs</td>
+<td>Contains the Verificatum proof of shuffling and decryption of the encrypted votes and encrypted tracker numbers.</td>
+</tr>
+<tr class='' data-href='/uploads/283/contents'>
+<td>Final Votes Proofs</td>
+<td>Contains the Verificatum proof of shuffling and decryption of the encrypted votes and encrypted tracker numbers.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>

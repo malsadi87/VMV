@@ -1,0 +1,62 @@
+<br><br><br><br><br><br>
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="/main">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/election/index">Elections</a></li>
+        <li class="nav-item" ><a class="nav-link" href="/main/verifiable">Verifiable Voting</a></li>
+       </ul>
+      <ul class="navbar-nav">
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class='container'>
+  <div class='jumbotron bg-white border mb-0 py-5'>
+      <h3 class="text-center">Elections</h3>
+      <br>
+<div class="row">
+
+<% for election in @completed_elections["elections"] %>
+<div class="col-sm-5">
+    <div class="card">
+    <div class="card-header">
+    <%= election["name"] %>
+  </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= election["description"]%></h5>
+        <p class="card-text"><%= election["date"]%></p>
+        <%= link_to 'View', {:controller => :election, :action => :view, :id   => election["id"] }, class:"btn btn-secondary" %>
+
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+
+<!--<div class="col-sm-5">
+    <div class="card">
+    <div class="card-header">
+    Election 2
+  </div>
+      <div class="card-body">
+        <h5 class="card-title">Trial Election</h5>
+        <p class="card-text">March 20, 2021.</p>
+        <a href="#" class="btn btn-primary">View</a>
+      </div>
+    </div>
+  </div>
+
+</div>-->
+
+</div>
+</div>

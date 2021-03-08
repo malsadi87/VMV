@@ -3,6 +3,7 @@ class AdminController < ApplicationController
   include ApplicationHelper
 
   before_action :check_admin_session, except: [:index]
+  protect_from_forgery with: :exception
 
   def index
     puts "welcome to index method"
@@ -50,7 +51,7 @@ class AdminController < ApplicationController
       voter_obj = table.select { |row| row['id'].to_i == voter["id"].to_i}
 
       helpers.beta(voter_obj.first["beta"])
-      helpers.loglink("http://localhost:3000/voter/login?election=#{name}")
+      helpers.loglink("https://vmv1.surrey.ac.uk/voter/login?election=#{name}")
       helpers.code(voter["code"])
 
       ## Send an email with token to voters' email
@@ -71,28 +72,68 @@ class AdminController < ApplicationController
     @election = params[:election]
     if !@election.nil?
       require 'json'
-      #@candidates = [{"id"=> 1, "name"=> "John David"}, {"id"=> 2, "name"=> "Stephane William"},{"id"=> 3, "name"=> "Hanna Peter"},{"id"=> 4, "name"=> "Michel Nimar"},{"id"=> 5, "name"=> "Marry John"}]
+      @candidates = [{"id"=> 1, "name"=> "John David"}, {"id"=> 2, "name"=> "Stephane William"},{"id"=> 3, "name"=> "Hanna Peter"},{"id"=> 4, "name"=> "Michel Nimar"},{"id"=> 5, "name"=> "Marry John"}]
       tempHash = {"id" => @election[:id], "name" => @election[:name], "sdate" => @election[:sdate], "location" => @election[:location], "candidates" => @candidates }
-      #json = File.read('public/elections.json')
-      #puts json
-      #@Array = JSON.parse(json)
-      #@eArr = @Array['elections']
-
-      #puts @Array
-      #puts @eArr
-      #@eArr << tempHash
-
-      #File.open("public/elections.json","w") do |f|
-      #  f.puts JSON.pretty_generate(@Array)
-      #end
-      flash[:notice] = 'Successfully generated  '  +  tempHash  
-
+      json = File.read('public/files/elections.json')
+      @Array = JSON.parse(json)
+      @eArr = @Array['elections']
+      @eArr << tempHash
+      File.open("public/files/elections.json","w") do |f|
+        f.puts JSON.pretty_generate(@Array)
+      end
+      flash[:success] = 'The election is successfully generated. '  
+      redirect_to '/admin/dashboard'
     end
-    puts "Generate Election Method main page"
-
   end
 
-  def sendVerifiactionParams
+  def sendVerificationParams
+    require 'json'
+    require 'csv'
+    @VotersList = CSV.parse(File.read('public/files/voters.csv'), headers: true)
+    table = CSV.parse(File.read('public/files/ers-associated-voters.csv'), headers: true)
+    name = params[:election]
+
+    @VotersList.each do |voter|
+      puts %(voter id : '#{voter["id"]}')
+      voter_obj = table.select { |row| row['id'].to_i == voter["id"].to_i}
+      vBeta = voter_obj.first["beta"]
+      helpers.beta(vBeta)
+      vAlpha = getAlphaValue(voter["id"])
+      helpers.name(voter["name"])
+      helpers.loglink("http://localhost:3000/voter/verificationResult?election=#{name}&beta=#{vBeta}&alpha=#{vAlpha}")
+      ## Send an email with token to voters' email
+      if voter["id"].to_i == 4
+        UserMailer.verification_email(voter["email"]).deliver
+      end
+    end
+    
+
+    ## Blockchain Part - Encrypted Votes
+    contract = helpers.get_election_contract
+    if contract.nil?
+      helpers.create_election_contract
+      contract = helpers.get_election_contract
+    end
+    encrypedVotes= CSV.parse(File.read('public/files/public-encrypted-voters.csv'), headers: true)
+    contract.gas_price = 0
+    contract.gas_limit = 8_000_000
+    encrypedVotes.each do |vote|
+      contract.transact_and_wait.add_record(vote["beta"].to_s, vote["encryptedVote"].to_s, vote["encryptedVoteSignature"].to_s, vote["encryptedTrackerNumberInGroup"].to_s, vote["publicKeySignature"].to_s, vote["publicKeyTrapdoor"].to_s)
+    end
+
+    ## Blockchain part - Plain Votes
+    post_contract = helpers.get_post_election_contract
+    if post_contract.nil?
+      helpers.create_post_election_contract
+      post_contract = helpers.get_post_election_contract
+    end
+    finalVotes= CSV.parse(File.read('public/files/public-mixed-voters.csv'), headers: true)
+
+    finalVotes.each do |vote|
+      post_contract.transact_and_wait.add_record(vote["trackerNumber"].to_s, vote["plainTextVote"].to_s)
+    end
+    flash[:success] = 'Verification parameters are sent successfully. Election Data is stored on Blockchain'
+    redirect_to '/admin/elections'
   end
 
   def uploadPreElectionToBC
@@ -114,6 +155,14 @@ class AdminController < ApplicationController
     redirect_to '/admin/elections'
     end
 
+  end
+
+  def getAlphaValue(val)
+    
+    require 'csv'
+    encryptedVoters = CSV.parse(File.read('public/files/ers-encrypted-voters.csv'), headers: true)
+    record = encryptedVoters.select { |row| row['id'].to_i == val.to_i}.first
+    return record['alpha']
   end
 
 

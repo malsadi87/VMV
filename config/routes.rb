@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'election/index'
+  get 'election/view'
+  get 'election/uploads'
+  get 'election/record'
+  post 'election/record' => 'election#record'
   get 'voter/login'
   get 'voter/elections'
   get 'voter/ballot'
@@ -22,7 +27,7 @@ Rails.application.routes.draw do
   get 'admin/elections'
   get 'admin/startElection'
   get 'admin/newElection'
-  get 'admin/sendVerifiactionParams'
+  get 'admin/sendVerificationParams'
   get 'admin/uploadPreElectionToBC'
 
   #admin controller - POST
@@ -34,9 +39,14 @@ Rails.application.routes.draw do
   post "admin/startElection" => "admin#startElection"
 
   #main controller - GET
+  get "/", to: "main#index"
   get "/main", to: "main#index"
   get "main/verifiable"
   get "main/elections"
+  get "main/BCExplorer"
+
+  #match 'election/record' => 'election#record', :as => :get_election_record, :via => [:get, :post]
+
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

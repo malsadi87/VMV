@@ -1,0 +1,12 @@
+{
+    "elections": [
+      {
+        "id": "1",
+        "name": "College of Podiatry",
+        "date": "October, 2019",
+        "description" : "Employment Support Committee election",
+        "files" : "/completed/1"
+      }
+    ]
+  }
+  

@@ -1,24 +1,53 @@
 {
-    "elections": [
-      {
-        "id": "5",
-        "name": "DemElection",
-        "sdate": "21-02-2021",
-        "location": "Surrey Uni",
-        "start_time":"00:00",
-        "end_time": "23:00",
-        "description" : "Test Election Demo",
-        "candidates": [
-          {
-            "id": 1,
-            "name": "Alice"
-          },
-          {
-            "id": 2,
-            "name": "Bob"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "elections": [
+    {
+      "id": "5",
+      "name": "DemElection",
+      "sdate": "02-03-2021",
+      "location": "Surrey Uni",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "description": "Test Election Demo",
+      "candidates": [
+        {
+          "id": 1,
+          "name": "Alice"
+        },
+        {
+          "id": 2,
+          "name": "Bob"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "GuildfordElection",
+      "sdate": "05-03-2021",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "location": "Guildford",
+      "candidates": [
+        {
+          "id": 1,
+          "name": "John David"
+        },
+        {
+          "id": 2,
+          "name": "Stephane William"
+        },
+        {
+          "id": 3,
+          "name": "Hanna Peter"
+        },
+        {
+          "id": 4,
+          "name": "Michel Nimar"
+        },
+        {
+          "id": 5,
+          "name": "Marry John"
+        }
+      ]
+    }
+  ]
+}

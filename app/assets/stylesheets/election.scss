@@ -1,0 +1,7 @@
+// Place all the styles related to the Election controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.tableFixHead          { overflow-y: auto; height: 300px; }
+.tableFixHead thead th { position: sticky; top: 0; }
+
+.contentTable          {overflow-x: auto; width:1200px;}

@@ -34,6 +34,8 @@
 
 
   </div>
-
+ <% flash.each do |key, value| %>
+          <div style="width:70%; align-self: center; align-items: center; align-content: center;" class="alert alert-<%= key %>"><%= value %></div>
+ <% end %>
 
 </div>

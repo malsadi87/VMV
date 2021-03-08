@@ -2,8 +2,9 @@ class VoterController < ApplicationController
   include Recaptcha::Adapters::ViewMethods
   include Recaptcha::Adapters::ControllerMethods
 
-  before_action :check_voter_session, except: [:login, :elections, :verificationResult]
+  before_action :check_voter_session, except: [:login, :elections, :verificationResult, :result]
 
+  protect_from_forgery with: :exception
 
   def check_voter_session
 
@@ -55,7 +56,7 @@ class VoterController < ApplicationController
 
         if !voter_obj.nil?
           session[:voter]      = @beta
-          session[:expires_at] = Time.current + 5.minutes
+          session[:expires_at] = Time.current + 10.minutes
           session[:election]   = @election_name
           puts "Creating a session for the current voter"
           #session.keys.each do |key|
@@ -133,15 +134,12 @@ class VoterController < ApplicationController
 
     encryptedVoters = CSV.parse(File.read('public/files/public-encrypted-voters.csv'), headers: true)
     voter= encryptedVoters.select { |row| row['beta'].to_i == @beta}.first
-
+    if !voter.nil?
     publicTrapdoorKey = voter["publicKeyTrapdoor"].to_i
-
     keys = CSV.parse(File.read('public/files/voters-keys.csv'), headers: true)
     key =  keys.select { |row| row['publicKeyTrapdoor'].to_i == publicTrapdoorKey}.first
 
     private_key = key["privateKeyTrapdoor"].to_i
-
-
 
     elections = CSV.parse(File.read('public/files/public-election-params.csv'), headers: true)
     election = elections.select {|row| row["name"].to_s == @election.to_s}.first
@@ -170,6 +168,9 @@ class VoterController < ApplicationController
 
     puts @plainTrackerNumber
     puts @plainVote
+    else
+      @error = "No vote associated with these details is found. Please get in touch with administrator."
+    end  
   end
 
   def truncate(string)

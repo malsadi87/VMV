@@ -1,0 +1,37 @@
+<br><br><br><br>
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top" style="background:white;">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="navbar-collapse collapse" id="navbar2">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="/main">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/election/index">Elections</a></li>
+        <li class="nav-item" ><a class="nav-link" href="/main/verifiable">Verifiable Voting</a></li>
+       </ul>
+      <ul class="navbar-nav">
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="jumbotron bg-white border mb-0 py-5">
+    
+   <% @headers.zip(@row).each do |header, row| %>
+
+   <div class="form-group row">
+         <label class="col-form-label col-sm-3"><%= header %> : </label>
+         <div class="col-sm-9">
+         <% len = row.length > 80 ? 10 : 1 %>
+              <textarea rows="<%= len %>" disabled="disabled" class="form-control"><%=row%></textarea>
+         </div>
+  </div>
+   <%end%>
+  </div>
+
+
+</div>
