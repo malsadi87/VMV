@@ -21103,3 +21103,38 @@ Processing by ElectionController#index as HTML
 Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 9204)
 
 
+Started GET "/" for ::1 at 2021-03-11 00:36:34 +0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 63.0ms | Allocations: 10661)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 86.6ms | ActiveRecord: 0.0ms | Allocations: 21038)
+
+
+Started GET "/election/index" for ::1 at 2021-03-11 00:36:36 +0300
+Processing by ElectionController#index as HTML
+  Rendering election/index.html.erb within layouts/application
+  Rendered election/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1569)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.0ms | Allocations: 10257)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-11 00:36:37 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4560)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 12806)
+
+
+Started GET "/election/uploads?file=encrypt-proofs&id=1&title=Encrypted+Votes+with+Tracker+Numbers+Proofs" for ::1 at 2021-03-11 00:36:40 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"encrypt-proofs", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers Proofs"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 93.3ms | Allocations: 99759)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 111ms (Views: 102.1ms | ActiveRecord: 0.0ms | Allocations: 115362)
+
+
