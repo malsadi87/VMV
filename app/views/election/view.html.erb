@@ -273,13 +273,13 @@
 <tbody>
 <tr class=''>
 <td>
-<%= link_to 'Encrypted Votes with Tracker Numbers', {:controller => :election, :action => :uploads,:title =>"Encrypted Votes with Tracker Numbers", :id => @id, :file => "public-encrypted-votes" } %>
+<%= link_to 'Encrypted Votes with Tracker Numbers', {:controller => :election, :action => :uploads,:title =>"Encrypted Votes with Tracker Numbers", :id => @id, :file => "public-encrypted-voters" } %>
 </td>
 <td>Contains the encrypted and signed vote for each voter together with their voter public keys, encrypted tracker number and partial commitment.</td>
 </tr>
 <tr class=''>
 <td>
-<%= link_to 'Encrypted Votes with Tracker Numbers Proofs', {:controller => :election, :action => :uploads,:title =>"Encrypted Votes with Tracker Numbers Proofs", :id => @id, :file => "encrypted-proofs" } %>
+<%= link_to 'Encrypted Votes with Tracker Numbers Proofs', {:controller => :election, :action => :uploads,:title =>"Encrypted Votes with Tracker Numbers Proofs", :id => @id, :file => "encrypt-proofs" } %>
 </td>
 <td>Contains the proof of encryption of each encrypted vote for each voter. The values can be used with suitable cryptographic algorithms to verify that each vote was encrypted correctly.</td>
 </tr>

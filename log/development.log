@@ -20776,3 +20776,330 @@ Processing by ElectionController#uploads as HTML
 Completed 200 OK in 1230ms (Views: 1152.2ms | ActiveRecord: 0.0ms | Allocations: 1372197)
 
 
+Started GET "/" for ::1 at 2021-03-10 18:44:47 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 67.6ms | Allocations: 10661)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 114ms (Views: 103.8ms | ActiveRecord: 0.0ms | Allocations: 21032)
+
+
+Started GET "/election/index" for ::1 at 2021-03-10 18:44:49 +0300
+Processing by ElectionController#index as HTML
+  Rendering election/index.html.erb within layouts/application
+  Rendered election/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1574)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.0ms | Allocations: 10259)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-10 18:44:50 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 15.8ms | Allocations: 4560)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.0ms | Allocations: 12803)
+
+
+Started GET "/election/uploads?file=encrypted-proofs&id=1&title=Encrypted+Votes+with+Tracker+Numbers+Proofs" for ::1 at 2021-03-10 18:44:53 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"encrypted-proofs", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers Proofs"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 583)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - public/files/completed/1/encrypted-proofs.csv):
+  
+app/controllers/election_controller.rb:17:in `read'
+app/controllers/election_controller.rb:17:in `uploads'
+Started GET "/election/view?id=1" for ::1 at 2021-03-10 18:45:01 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 4.7ms | Allocations: 3325)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 11426)
+
+
+Started GET "/election/uploads?file=public-election-keys-1&id=1&title=Election+Public+Key" for ::1 at 2021-03-10 18:45:03 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-election-keys-1", "id"=>"1", "title"=>"Election Public Key"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1434)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 9794)
+
+
+Started GET "/election/uploads?file=public-tracker-numbers&id=1&title=Tracker+Numbers" for ::1 at 2021-03-10 18:45:06 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-tracker-numbers", "id"=>"1", "title"=>"Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1008.1ms | Allocations: 1328222)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1110ms (Views: 1022.9ms | ActiveRecord: 0.0ms | Allocations: 1403485)
+
+
+Started GET "/election/uploads?file=public-tracker-numbers&id=1&title=Tracker+Numbers" for ::1 at 2021-03-10 18:45:14 +0300
+Processing by ElectionController#uploads as */*
+  Parameters: {"file"=>"public-tracker-numbers", "id"=>"1", "title"=>"Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1116.8ms | Allocations: 1328506)
+Started POST "/election/record" for ::1 at 2021-03-10 18:45:15 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ElectionController#record as HTML
+  Parameters: {"authenticity_token"=>"q0DfLMY593wT4YoV9blXsdHDkuP4ZfAQvtaqisZcVefEFfkZRjg8h/UdvQtiNc8Ptil9in96FIntj4/ztl6Uww==", "headers"=>"encryptedTrackerNumberInGroup,trackerNumber,trackerNumberInGroup", "row"=>"AAABf2Qj0BjmngWxCsWSDgT7bzLenxTCJsMc9Ymqb0ZY66L1070DImCzRKpVEjEmnLgtb2XEqsltIGsCmLAFRLh7gNdjW1h1kpXVSC9AiFI6mp9tl9ipVyy2rFJV/luvzxPZ/SXaFAgTOleGa10EjQObgPLdTB831eMU+EqRPiQp+J8ehsR6aevFrUDL7gZl+GEZ6URq341K2pcS6J4oJd/L19bXIcriXx4EaYfgxP7+fHTm24fBlo0xa3x7Mpm3nHaqgq4cy6UnCUkOmIdfHv3B4Ik+9TSbgtvpvndISU+A6MSmLOJwGfwIqEv5u9pj0glka0r+H99eawmhlRtlBuPmn5zHZ/5saW6y1xaKDfcVe4buHLKn7PdieutQH1yq1Ww6eewiKn3HDbsOcwCLpLqCgf1YZ5+06xs4tmcVyP6O1WdrUTCWFbYlUYfzl1dQEinES8iS8oUko+iVGhKutfkgkmEYVqameRVN+HEFT9o/m1pynyjE16wIIrZAq26eYjNwAAABgFsvluun/W7A8HHVgLb75bGDh6KUQJmhE//40LV2eoe2SeIj7YpAXaMriafxCXubGWuzNCwVcmbN76E174LtuBOpzvw59Ra4u5MvwwX+ZcYeYUc86b4UA+LEUzoptHbhjb4vvduWDyfbMEtk8i1KspNz97ygyovQvOJFW0swbe+1zztnitRK27obh6KuvUeVuzFW8Mqas2BYiWzqBzs6c++0NdIGKuwI0l5bwSbc54NAZ7ZOV7QjMp8NBIkhzA9TvNFqzAUBtJIlyjIaAiUyMmWsmZotYqwa0SFGvJw6Gr3YmuF59GbU1NTjlKtfmXpOLV+DbC46Jhvh7d+9AVGmoW+mrQk+oj8oaS95fUqihPTJC0xKdOFj94ch7VPeTAVtp882ft3o3oZlho2l4Yw6wIFUsDfSePjl0Y56NRyyBWt8x3+5kbkXzbmi83G9OoHybQuEoawwE/e6KZXNNfMLDNzuxl2ahl3Bm03vTyDt18Z6LaDcq5IaRk+62gFlM97ZSw==,63206759,3155159809707431955440672568872833218311229375886569611271609738153072320089791498934718742256743907497191822899131210004742968804708183169807674995947776872998911773610091997877937011593068066973993831907421767730351713277112899285267978756319537651984634576571164536216966754923729590755559701215057285102755233693743148456925730835018652761747967085183031945947404125341808499481612581154683651042724535689013786579310765318576422898320949680660006407867131693455700311165500241473335328873231314934298789151902677390146380666398469864752152363393086494906779355742694254751370772959144033179649337787616327445951598461675453464269709011323362781259403797583664579078490859565166694974653884628212741611165059485244650462560362642087678758933402197344430768281461729501492111764560046792148315423920386238342021668937374451472404182117519118260507257791331234977354158890907270110089591355099097418255061560461223395936152\r\n"}
+  Rendering election/record.html.erb within layouts/application
+  Rendered election/record.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2323)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1214ms (Views: 1162.2ms | ActiveRecord: 0.0ms | Allocations: 1414738)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 0.0ms | Allocations: 13255)
+
+
+Started GET "/election/uploads?file=public-tracker-numbers&id=1&title=Tracker+Numbers" for ::1 at 2021-03-10 18:45:18 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-tracker-numbers", "id"=>"1", "title"=>"Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1103.3ms | Allocations: 1328232)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1163ms (Views: 1119.3ms | ActiveRecord: 0.0ms | Allocations: 1403489)
+
+
+Started GET "/election/uploads?file=public-mixed-voters-1&id=1&title=Final+Votes" for ::1 at 2021-03-10 18:45:32 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-mixed-voters-1", "id"=>"1", "title"=>"Final Votes"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 79.9ms | Allocations: 91970)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 90ms (Views: 87.9ms | ActiveRecord: 0.0ms | Allocations: 103638)
+
+
+Started GET "/election/uploads?file=encrypted-proofs&id=1&title=Encrypted+Votes+with+Tracker+Numbers+Proofs" for ::1 at 2021-03-10 18:45:42 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"encrypted-proofs", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers Proofs"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 575)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - public/files/completed/1/encrypted-proofs.csv):
+  
+app/controllers/election_controller.rb:17:in `read'
+app/controllers/election_controller.rb:17:in `uploads'
+Started GET "/election/view?id=1" for ::1 at 2021-03-10 18:45:46 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3305)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 11389)
+
+
+Started GET "/election/uploads?file=public-encrypted-votes&id=1&title=Encrypted+Votes+with+Tracker+Numbers" for ::1 at 2021-03-10 18:45:50 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-encrypted-votes", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 575)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - public/files/completed/1/public-encrypted-votes.csv):
+  
+app/controllers/election_controller.rb:17:in `read'
+app/controllers/election_controller.rb:17:in `uploads'
+Started GET "/election/view?id=1" for ::1 at 2021-03-10 18:45:56 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3304)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 11391)
+
+
+Started GET "/election/uploads?file=public-encrypted-votes&id=1&title=Encrypted+Votes+with+Tracker+Numbers" for ::1 at 2021-03-10 18:46:38 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-encrypted-votes", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 579)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - public/files/completed/1/public-encrypted-votes.csv):
+  
+app/controllers/election_controller.rb:17:in `read'
+app/controllers/election_controller.rb:17:in `uploads'
+Started GET "/election/view?id=1" for ::1 at 2021-03-10 18:48:21 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3304)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 11395)
+
+
+Started GET "/election/uploads?file=encrypted-proofs&id=1&title=Encrypted+Votes+with+Tracker+Numbers+Proofs" for ::1 at 2021-03-10 18:48:24 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"encrypted-proofs", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers Proofs"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 575)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - public/files/completed/1/encrypted-proofs.csv):
+  
+app/controllers/election_controller.rb:17:in `read'
+app/controllers/election_controller.rb:17:in `uploads'
+Started GET "/election/uploads?file=encrypted-proofs&id=1&title=Encrypted+Votes+with+Tracker+Numbers+Proofs" for ::1 at 2021-03-10 18:50:00 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"encrypted-proofs", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers Proofs"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 575)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - public/files/completed/1/encrypted-proofs.csv):
+  
+app/controllers/election_controller.rb:17:in `read'
+app/controllers/election_controller.rb:17:in `uploads'
+Started GET "/election/index" for ::1 at 2021-03-10 18:50:13 +0300
+Processing by ElectionController#index as HTML
+  Rendering election/index.html.erb within layouts/application
+  Rendered election/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 956)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 9991)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-10 18:50:14 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 5.5ms | Allocations: 4503)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 12733)
+
+
+Started GET "/election/uploads?file=public-encrypted-votes&id=1&title=Encrypted+Votes+with+Tracker+Numbers" for ::1 at 2021-03-10 18:50:17 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-encrypted-votes", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 578)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - public/files/completed/1/public-encrypted-votes.csv):
+  
+app/controllers/election_controller.rb:17:in `read'
+app/controllers/election_controller.rb:17:in `uploads'
+Started GET "/election/view?id=1" for ::1 at 2021-03-10 18:50:20 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 3.4ms | Allocations: 3304)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 11395)
+
+
+Started GET "/election/uploads?file=encrypt-proofs&id=1&title=Encrypted+Votes+with+Tracker+Numbers+Proofs" for ::1 at 2021-03-10 18:50:23 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"encrypt-proofs", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers Proofs"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 95.0ms | Allocations: 99709)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 110ms (Views: 103.8ms | ActiveRecord: 0.0ms | Allocations: 115309)
+
+
+Started POST "/election/record" for ::1 at 2021-03-10 18:50:46 +0300
+Processing by ElectionController#record as HTML
+  Parameters: {"authenticity_token"=>"CimR413oafZCnZq9salf+1xPqDtajobZhJ8BC+VQBWBlfLfW3emiDaRhraMmJcdFO6VHUt2RYkDXxiRylVLERA==", "headers"=>"c1Bar,c1R,c2Bar,c2R,encryptedVoteSignature", "row"=>"2111152892760989447988880551591902708007097166427155805145971703195469506107378768228834900022860340211170942457770087016676895284832302147383730724301264288038183212706539169079189872468336029989984210885193692191458733421132479258691999603563942537540007899113546367707643800867284740387971019037046588176114622242722034660657113716078529830352810806705742781147756319417967391852808515516426507310459900958617491730331561524619062495748355680629744278491708640661657635786973222183458018286817288135931864400315481577721214488816188944926901814369309468458941384379717983991447852551429083014886236515266611765578591018884580129484455588836030275620956904945164843289935044296654332463866104963246806609705730619843319223537850236270654734401237405479902500878955538703093968857429246650857520509063027818755305827217140970760455675704776036528131844322370245146416393033472997529452868076505161460153674142788189073961640,2934130804518584377914871520943124957662306645633301525683518487465127347615689286515981592902790456005048448985191037234070558796794106434081040980818262920219040369319716909231599973101409335968374014214998403909335430089316598661657264105475134349869377454991665770230504239454933926106094087620678097937388009649797888260709565223053997665528703191329271841567231593916759312021391993920746969451960152260209284967827843294280749319400822232543140785523721029114337536115568950090623655754061691602714608907000685830304653447345141294745654668719627470746054049743193640869506919887841307552004646045480491206826717017231522200954096165141515364790668938776731148094825877358644518846430977857538627093778503027751949801761951715567227662923694689143835750816486333892684883902202943222390258019180536992829419730534288377317999446657468369771931610940110126548945277966978407195165965693948653089748768081612710321246846,2236950866665809787740903442767815787297650810424625600323147716800730833522838241792456144199686095851662310018055146922444789190323601169533533410828383248874471807778886667278966546876543602185381276931679230995465272103300893843689684698627280381200858748068658695355215715764881626975034246885156358346126522687632736941809756044267307031032692941625074869947543583694790477506845667435437076981359342450438164755289164280474561938521091789669705831089779920093594319732725956512135609056794558651585689701909461680298119157140436130096504121984034508153210286912318572947443800409099368304790923724670505701749544414661539420796532121692593015419842178922609597944710519453255560053574244924729855120685081680289261019619258712608039047102520957788178837717490949250782673923271951296888181091385049675657944832235223832624226617481992475873776294756969761758528090051088142730026225414454092073333412620823623898024304,2249780325072192646765777048814566982828153178386634506304303004752296099297083321898329850647956215350342123882102358079629312656011327296854903970066136223469932188061583855142896538944474813150067453150158517076242474173479773497419956356114464289853786821578741864518708034704688683480784665255502983623733541641920866916002132941287058811853800253306963644298009898590514536126463767987148237044629887404062895267795064224836037576822036344890533597898434220863564505674611243908184134657711118160098319834212917388878267411635859607475162642558219182199496689387417119875832482265148953085067472203092415446695738158302595218378485556798399777167508299022704271090141778353356024257414002074036021314215524533265704031282103095937862960450055523547422752694080443092035181837334851456027844430257260031823902109844229930510869835877738048896381824136349310443729924928785921336769225557103639252479721520565956135593001,MEQCIEjQ843qs0ZkosdPTNwWr7xffmdsqan/JS7gT/97RkDVAiBEZoruluEE+Fm4lAurwjaWUVmUeLVyhjP3F1BWQ04t1w==\r\n"}
+  Rendering election/record.html.erb within layouts/application
+  Rendered election/record.html.erb within layouts/application (Duration: 1.8ms | Allocations: 839)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 9151)
+
+
+Started GET "/election/index" for ::1 at 2021-03-10 18:50:53 +0300
+Processing by ElectionController#index as HTML
+  Rendering election/index.html.erb within layouts/application
+  Rendered election/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 674)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 8774)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-10 18:50:54 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3303)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 11397)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-10 18:51:11 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 4.8ms | Allocations: 4509)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 13533)
+
+
+Started GET "/election/uploads?file=public-encrypted-voters&id=1&title=Encrypted+Votes+with+Tracker+Numbers" for ::1 at 2021-03-10 18:51:16 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-encrypted-voters", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1148.4ms | Allocations: 1381679)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1297ms (Views: 1179.1ms | ActiveRecord: 0.0ms | Allocations: 1497944)
+
+
+Started GET "/election/uploads?file=public-encrypted-voters&id=1&title=Encrypted+Votes+with+Tracker+Numbers" for ::1 at 2021-03-10 18:51:38 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-encrypted-voters", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1173.2ms | Allocations: 1381185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1352ms (Views: 1196.7ms | ActiveRecord: 0.0ms | Allocations: 1497316)
+
+
+Started GET "/election/uploads?file=public-encrypted-voters&id=1&title=Encrypted+Votes+with+Tracker+Numbers" for ::1 at 2021-03-10 18:52:01 +0300
+Processing by ElectionController#uploads as */*
+  Parameters: {"file"=>"public-encrypted-voters", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1123.0ms | Allocations: 1381585)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1255ms (Views: 1154.2ms | ActiveRecord: 0.0ms | Allocations: 1497864)
+
+
+Started GET "/election/uploads?file=public-encrypted-voters&id=1&title=Encrypted+Votes+with+Tracker+Numbers" for ::1 at 2021-03-10 18:52:03 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ElectionController#uploads as */*
+  Parameters: {"file"=>"public-encrypted-voters", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1096.2ms | Allocations: 1381277)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1227ms (Views: 1132.6ms | ActiveRecord: 0.0ms | Allocations: 1498081)
+
+
+Started GET "/election/uploads?file=public-encrypted-voters&id=1&title=Encrypted+Votes+with+Tracker+Numbers" for ::1 at 2021-03-10 18:52:11 +0300
+Processing by ElectionController#uploads as */*
+  Parameters: {"file"=>"public-encrypted-voters", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+Started POST "/election/record" for ::1 at 2021-03-10 18:52:11 +0300
+Processing by ElectionController#record as HTML
+  Parameters: {"authenticity_token"=>"4s59fePSZdkEjGYFJ411nf9AYSNAx5qvvnU8mKdZc2Ap/GbeElkYgMtZ1wl5Eti9bnL+is8qNC1mLhXvBQnuSA==", "headers"=>"beta,encryptedVote,encryptedVoteSignature,encryptedTrackerNumberInGroup,publicKeySignature,publicKeyTrapdoor", "row"=>"1001139242535065904454958442414055702378482226162782489542499045033018993765067426884470931501943746947371285003079152451058906995876122607867180461793025402216066836629237373403608800326055467992092428867963298421485275501360857483214442319101607517078530707376612997779012874313290665549327927788172836639813209162080325935053925846335157356600329179969994817570448277996724978800196321049300661692478341549697385692904628750533024316316897649077481675970532395938777408008173732432291337822369145509818712385412774302005093785753279850295676032907442077068026308579278192547908010952172094095749742285782844404700862431176874516749871887005799928306489211320336732242130254021477796151636370681812292468959334457160581850711950200538606635248384536362744421910921083303589849554157954801409321637780204332071843362185792420270133554833024853950365770685260716499312907818061469234676284564348794592828060584761601272245635,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,1286952865349207041411475591685219723079843631005208043091249093747207372522907852162270021889820626629593138123200416108159353136081744724013964559060503264547733281251622237681697998712572950406172375499451542399027940055156727051765393363398635757221555058453253230267773404447240140167301414881581890256469592058127190431600798597636112240255841653714606990355431600572380957759349494369551990242639222449350566421859738705246700228721356174539457658516630738636757031376709127250289024100679791335787249837856977333321228953018426531053964752165204512835774257795404659514825020434764324566659825165949884940748932608898306893958840385111869504897863337535541136843906151240726439914762148173568425354794088254763810973347852148888117167417800531550673941605865663675965921995914056629620517918750128746157333193742467488690965550356693660061022878240472678810712043492942025298397074275648890755178610971592139528461886,2292463313465933560617860338494677125143103091956649419590684512226756590135244138170530617131292034949085388183484001500193454898351292035542542217332293126063190949688219831438900848472581099665735133636537280206901641620810196326970585756240357433694088283379933117546203126765118990362716598592042984583774960991237397729310033888816008517772605183298604181104855858831483219299243510219103364333297913850601491486189929231290400124985788850758903204985520690401276174405407293000132200066410123258249467544158208097042424268840343551704288141787483856466323489085108819352848133983980543659746415260314577657125755610162426509042854619227842491327228903771245630773672976998848823628730248933474676087242389672048961775932686488841280584251840877755846965025518642689609715179587016030186761450634724321713861759733796215826529213777172651769150022245612596043714153555334827007843761923828801406539812441236569320873863\r\n"}
+  Rendering election/record.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1215.8ms | Allocations: 1383182)
+  Rendered election/record.html.erb within layouts/application (Duration: 597.6ms | Allocations: 758058)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1336ms (Views: 1251.5ms | ActiveRecord: 0.0ms | Allocations: 1506840)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1113ms (Views: 802.6ms | ActiveRecord: 0.0ms | Allocations: 1161165)
+
+
+Started GET "/election/index" for ::1 at 2021-03-10 18:52:19 +0300
+Processing by ElectionController#index as HTML
+  Rendering election/index.html.erb within layouts/application
+  Rendered election/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 961)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 9204)
+
+
