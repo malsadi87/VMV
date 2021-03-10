@@ -73,7 +73,7 @@ class AdminController < ApplicationController
     if !@election.nil?
       require 'json'
       @candidates = [{"id"=> 1, "name"=> "John David"}, {"id"=> 2, "name"=> "Stephane William"},{"id"=> 3, "name"=> "Hanna Peter"},{"id"=> 4, "name"=> "Michel Nimar"},{"id"=> 5, "name"=> "Marry John"}]
-      tempHash = {"id" => @election[:id], "name" => @election[:name], "sdate" => @election[:sdate], "location" => @election[:location], "candidates" => @candidates }
+      tempHash = {"id" => @election[:id], "name" => @election[:name], "sdate" => @election[:sdate], "location" => @election[:location], "start_time" => @election[:stime], "end_time" => @election[:etime] ,"candidates" => @candidates }
       json = File.read('public/files/elections.json')
       @Array = JSON.parse(json)
       @eArr = @Array['elections']

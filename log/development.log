@@ -21138,3 +21138,102 @@ Processing by ElectionController#uploads as HTML
 Completed 200 OK in 111ms (Views: 102.1ms | ActiveRecord: 0.0ms | Allocations: 115362)
 
 
+Started GET "/" for ::1 at 2021-03-11 02:02:23 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 25.9ms | Allocations: 10661)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 46.2ms | ActiveRecord: 0.0ms | Allocations: 21106)
+
+
+Started GET "/admin/index" for ::1 at 2021-03-11 02:02:27 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1697)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 10430)
+
+
+Started POST "/admin/index" for ::1 at 2021-03-11 02:02:33 +0300
+Processing by AdminController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ceDkieZNVlr7MtUdQqHGGkllW6abX/KBYG7reKOe8uUAMbNA5vovUPLP79xTe028uAgiLiU8q+vf0nNDpPHn6w==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+Redirected to http://localhost:3000/admin/dashboard?name=admin%40admin.com
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 445)
+
+
+Started GET "/admin/dashboard?name=admin%40admin.com" for ::1 at 2021-03-11 02:02:33 +0300
+Processing by AdminController#dashboard as HTML
+  Parameters: {"name"=>"admin@admin.com"}
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1033)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.0ms | Allocations: 9352)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-11 02:02:34 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1657)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 10013)
+
+
+Started GET "/admin/newElection" for ::1 at 2021-03-11 02:02:38 +0300
+Processing by AdminController#newElection as HTML
+  Rendering admin/newElection.html.erb within layouts/application
+  Rendered admin/newElection.html.erb within layouts/application (Duration: 1.7ms | Allocations: 993)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 9296)
+
+
+Started POST "/admin/newElection" for ::1 at 2021-03-11 02:03:06 +0300
+Processing by AdminController#newElection as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+/Obqg9jCQYpxgUfMhrqiZxD4Hp6w7uk0lhMpAStoMV9jrVade44lMpwxvYKkjjCgLS9Bq5fGtN/qmj9rhwvyg==", "election"=>{"id"=>"7", "name"=>"test", "sdate"=>"11-03-2021", "location"=>"Surrey", "stime"=>"00:00", "etime"=>"23:00"}}
+Redirected to http://localhost:3000/admin/dashboard
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 607)
+
+
+Started GET "/admin/dashboard" for ::1 at 2021-03-11 02:03:06 +0300
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (Duration: 1.2ms | Allocations: 748)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 8897)
+
+
+Started GET "/voter/elections" for ::1 at 2021-03-11 02:03:30 +0300
+Processing by VoterController#elections as HTML
+  Rendering voter/elections.html.erb within layouts/application
+  Rendered voter/elections.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1315)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 10098)
+
+
+Started GET "/voter/login?election=test" for ::1 at 2021-03-11 02:03:32 +0300
+Processing by VoterController#login as HTML
+  Parameters: {"election"=>"test"}
+  Rendering voter/login.html.erb within layouts/application
+  Rendered voter/login.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1694)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 10387)
+
+
+Started GET "/voter/login?election=GuildfordElection" for ::1 at 2021-03-11 02:03:44 +0300
+Processing by VoterController#login as HTML
+  Parameters: {"election"=>"GuildfordElection"}
+  Rendering voter/login.html.erb within layouts/application
+  Rendered voter/login.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1301)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 9834)
+
+
+Started GET "/voter/login?election=DemElection" for ::1 at 2021-03-11 02:05:42 +0300
+Processing by VoterController#login as HTML
+  Parameters: {"election"=>"DemElection"}
+  Rendering voter/login.html.erb within layouts/application
+  Rendered voter/login.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1056)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 10482)
+
+
