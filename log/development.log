@@ -20686,3 +20686,93 @@ Processing by AdminController#newElection as HTML
 Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 9267)
 
 
+Started GET "/" for ::1 at 2021-03-10 03:45:07 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 23.8ms | Allocations: 10661)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 58.6ms | ActiveRecord: 0.0ms | Allocations: 21116)
+
+
+Started GET "/election/index" for ::1 at 2021-03-10 03:45:10 +0300
+Processing by ElectionController#index as HTML
+  Rendering election/index.html.erb within layouts/application
+  Rendered election/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1574)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 10262)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-10 03:45:11 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4560)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 12811)
+
+
+Started GET "/election/uploads?file=public-election-keys-1&id=1&title=Election+Public+Key" for ::1 at 2021-03-10 03:45:12 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-election-keys-1", "id"=>"1", "title"=>"Election Public Key"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1435)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 9806)
+
+
+Started POST "/election/record" for ::1 at 2021-03-10 03:45:14 +0300
+Processing by ElectionController#record as HTML
+  Parameters: {"authenticity_token"=>"ZfqQU2hu6zpjRo15fZEvORNelRd+bBN9LnQZliEeYPFydSsOOvxW/2YtIyYeT/gpYfCdwC7L6Kt4lW7uuWNY3w==", "headers"=>"publicKey", "row"=>"2869309583987714324563745371325603679373201286280993666871146021523902806993405445989404335964732425492553683377969412637190915863553196100047981099541847000866484270475819039743970859114896776014532992122886375339659186036133520031381019320868717927983205242088630057872403093216225303988312767298819578769266588535561410748554292586037698619243874677082820544735128346171371300602577420998208997512013641329423226118408443173326929619806859776384214235010048483497613688351896133332801179659747855605448624745135374299807501843788751709622685583081413331736821322862638286383551963067006381895898359174694304867281625256663646712326113478786957080871737446571153142218907128652222303464919688141180366824326321726867948805577339733588607320817672022815255450167766207475766308362511249298891887833103675765412592738397826983524481921743781520138975781886839104645987020397093102112808962622919294511924354064940750299214738\r\n"}
+  Rendering election/record.html.erb within layouts/application
+  Rendered election/record.html.erb within layouts/application (Duration: 2.9ms | Allocations: 818)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 9138)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-10 03:45:17 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3312)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 11413)
+
+
+Started GET "/election/uploads?file=public-voters-keys&id=1&title=Voter+Public+Keys" for ::1 at 2021-03-10 03:45:20 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-voters-keys", "id"=>"1", "title"=>"Voter Public Keys"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 932.6ms | Allocations: 1305884)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1020ms (Views: 947.4ms | ActiveRecord: 0.0ms | Allocations: 1372212)
+
+
+Started GET "/election/uploads?file=public-voters-keys&id=1&title=Voter+Public+Keys" for ::1 at 2021-03-10 03:45:26 +0300
+Processing by ElectionController#uploads as */*
+  Parameters: {"file"=>"public-voters-keys", "id"=>"1", "title"=>"Voter Public Keys"}
+  Rendering election/uploads.html.erb within layouts/application
+Started POST "/election/record" for ::1 at 2021-03-10 03:45:26 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ElectionController#record as HTML
+  Parameters: {"authenticity_token"=>"Lzi3UEUX21R+GkveZeD93lyeQ6YHX5Kk74zBWdx7Aiw4twwNF4VmkXtx5YEGPirOLjBLcVf4aXK5bbYhRAY6Ag==", "headers"=>"publicKeySignature,publicKeyTrapdoor", "row"=>"1000064060355373655791402044918680181801199584289773432026990413236052917350348028752821469362905534564038487987428224660386459846465867134791049965804597876190974981295442681684412288027467001300974420712623259893420521088999303313740423494096437870125678842277169966488541454342989108341868973563130289956089768561976431367663766294923689159211272220054943958191315155117810006952737035354550299618870873016122010227534296615962238225910223715478155333719017557068100142216557228477419341451119383148368759487331225076113547849504010873747912481832567282345051096139680346547041766963317401214354553065933805457664623384221147147499427691051402295176202918239067078133991963748607089448292463399754643563620902463410133856073136391727105509072903169705154209004193909783912891048502680648235489496243016495526330378763420025732885222816931296677035083796876383798646074965919815813061474745588339326293676399837585322509073,511812139905160666453491513641136187914096192746262200235724576850516976975760024220210221045152642988536886613378679006918527546448110472942483199969141108264361745412253011037122075410897418445513413485916506664853035109317489172861153569700728387318983581509231429630106661514800130302245416562729481874864140712993459825955917078871968043304925845519327822683747333305631317013282804273131763761285984701022255728625971122624692906228515850801371840741946166760279700308912120131657960909106496592540284138702951743817424910112280367862113569361345798383391958677120270629193365930169436585569124208469108948163339471305840607113851498917291473450758279317603036272944370194856402170108917732162288361099079335585868580228000399002745222800916089673704498957799049748106921824528607339065455415507338837634580889692684061564242075945264530581475777889692590129594453286484464865875947946118915903441675302233401981702151\r\n"}
+  Rendering election/record.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1136.7ms | Allocations: 1307910)
+  Rendered election/record.html.erb within layouts/application (Duration: 823.4ms | Allocations: 995024)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1052ms (Views: 947.3ms | ActiveRecord: 0.0ms | Allocations: 1252401)
+
+
+Completed 200 OK in 1263ms (Views: 1168.8ms | ActiveRecord: 0.0ms | Allocations: 1383112)
+
+
+Started GET "/election/uploads?file=public-voters-keys&id=1&title=Voter+Public+Keys" for ::1 at 2021-03-10 03:45:30 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-voters-keys", "id"=>"1", "title"=>"Voter Public Keys"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1134.7ms | Allocations: 1305870)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1230ms (Views: 1152.2ms | ActiveRecord: 0.0ms | Allocations: 1372197)
+
+
