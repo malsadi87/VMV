@@ -16,18 +16,19 @@
 
     <div class="container" id="list">
 
+      <% if @parsed_json.length == 0 %>
+        <p> No Active Election were found !! </p>
+      <% else %>
       <div class="row">
-        <% for election in @parsed_json["elections"] %>
+      <% @parsed_json.each do |election| %>
         <div class="col-lg-4 col-md-6 col-12 my-3">
           <div class="card text-black">
             <div class="card-header d-flex justify-content-between">
               <span><%= election["name"] %></span>
               <div class="text-nowrap">
               </div>
-
             </div>
             <div class="card-body px-0">
-
               <p class="card-title d-flex flex-row rounded mx-1">
                 <span class="col-6 text-left">ID</span>
                 <span class="col-6 text-right"><%= election["id"] %></span>
@@ -37,8 +38,8 @@
                 <span class="col-6 text-right"><%= election["sdate"] %></span>
               </p>
               <p class="card-title d-flex flex-row rounded mx-1">
-                <span class="col-6 text-left">Location</span>
-                <span class="col-6 text-right"><%= election["location"] %></span>
+                <span class="col-6 text-left">End Date</span>
+                <span class="col-6 text-right"><%= election["edate"] %></span>
               </p>
               <p class="card-title d-flex flex-row mb-0">
                 <span class="col text-center">
@@ -49,9 +50,8 @@
           </div>
         </div>
         <% end %>
-
       </div>
-
+      <% end %>
       <% flash.each do |key, value| %>
         <% if key=='success' %>
         <div class="alert alert-success" role="alert">

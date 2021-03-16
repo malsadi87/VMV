@@ -25,15 +25,24 @@ class AdminController < ApplicationController
     end
   end
 
+  def logout
+    session.clear
+    redirect_to '/admin/index'
+  end
+
   def dashboard
   end
 
   def elections
     require 'json'
     json = File.read('public/files/elections.json')
-    puts "View Elections method"
-    puts json
-    @ElectionArray = JSON.parse(json)
+    
+    array = JSON.parse(json)
+    elections = array['elections']
+    result = elections.select { |hash| hash["active"].to_s == "true" }
+    puts "result od elections"
+    puts result.length
+    @ElectionArray = result
   end
 
   def startElection
@@ -69,11 +78,21 @@ class AdminController < ApplicationController
   end
 
   def newElection
+    require 'csv'
+    require 'json'
+
     @election = params[:election]
-    if !@election.nil?
-      require 'json'
-      @candidates = [{"id"=> 1, "name"=> "John David"}, {"id"=> 2, "name"=> "Stephane William"},{"id"=> 3, "name"=> "Hanna Peter"},{"id"=> 4, "name"=> "Michel Nimar"},{"id"=> 5, "name"=> "Marry John"}]
-      tempHash = {"id" => @election[:id], "name" => @election[:name], "sdate" => @election[:sdate], "location" => @election[:location], "start_time" => @election[:stime], "end_time" => @election[:etime] ,"candidates" => @candidates }
+    @candidates = Array.new
+      if !@election.nil?
+      uploaded_io = params[:candidateList]
+      uploadedCandidates = CSV.parse(File.read(uploaded_io.path), headers: true)
+      uploadedCandidates.each do |candidate| 
+        @candidates << {"id"=> candidate["id"], "name"=> candidate["name"]}
+      end
+
+      newID = get_next_election_id.to_i + 1
+       
+      tempHash = {"id" => newID.to_s, "name" => @election[:name], "sdate" => @election[:sdate], "edate" => @election[:edate], "start_time" => @election[:stime], "end_time" => @election[:etime], "active" => "true" ,"candidates" => @candidates }
       json = File.read('public/files/elections.json')
       @Array = JSON.parse(json)
       @eArr = @Array['elections']
@@ -83,6 +102,9 @@ class AdminController < ApplicationController
       end
       flash[:success] = 'The election is successfully generated. '  
       redirect_to '/admin/dashboard'
+     
+    else
+      puts "election is null"
     end
   end
 
@@ -165,6 +187,12 @@ class AdminController < ApplicationController
     return record['alpha']
   end
 
+
+  def get_next_election_id
+    require 'json'
+    elections = File.read('public/files/elections.json')
+    return JSON.parse(elections)["elections"].size
+  end
 
 
   def check_admin_session

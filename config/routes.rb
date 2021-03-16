@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get 'admin/newElection'
   get 'admin/sendVerificationParams'
   get 'admin/uploadPreElectionToBC'
+  get 'admin/logout'
 
   #admin controller - POST
   post 'login' => 'admin#index', as: :login
@@ -37,6 +38,7 @@ Rails.application.routes.draw do
   post "admin/sendVerificationParams" => "admin#sendVerificationParams"
   post "admin/uploadPreElectionToBC" => "admin#uploadPreElectionToBC"
   post "admin/startElection" => "admin#startElection"
+  post "admin/logout" => "admin#logout"
 
   #main controller - GET
   get "/", to: "main#index"

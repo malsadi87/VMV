@@ -1,5 +1,8 @@
 class MainController < ApplicationController
   def index
+    require 'json'
+    json = File.read('public/files/finished-elections.json')
+    @completed_elections = JSON.parse(json)
   end
 
   def BCExplorer

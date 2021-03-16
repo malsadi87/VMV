@@ -38,10 +38,13 @@ class VoterController < ApplicationController
     startTime = Time.parse(election["start_time"])
     endTime   = Time.parse(election["end_time"])
     electionDate = Date.strptime(election["sdate"], '%d-%m-%Y')
-    
+    electionEDate = Date.strptime(election["edate"], '%d-%m-%Y')
 
-    @dateCompare = electionDate == Date.today
+    puts "election start date '#{electionDate}"
+    puts "election end date '#{electionEDate}"
 
+    @dateCompare = electionDate <= Date.today && Date.today <= electionEDate
+   
     @timeCompare = startTime< Time.now && Time.now<endTime
 
     if !@voter.nil?
@@ -96,7 +99,15 @@ class VoterController < ApplicationController
   def elections
     require 'json'
     json = File.read('public/files/elections.json')
-    @parsed_json = JSON.parse(json)
+    array = JSON.parse(json)
+    elections = array['elections']
+    puts elections
+
+    
+    result = elections.select { |hash| hash["active"].to_s == "true" && (Date.strptime(hash["sdate"], '%d-%m-%Y') <= Date.today && Date.today <= Date.strptime(hash["edate"], '%d-%m-%Y'))}
+    puts "result od elections"
+    puts result.length
+    @parsed_json = result
   end
 
   def ballot

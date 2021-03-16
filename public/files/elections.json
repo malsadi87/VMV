@@ -1,31 +1,22 @@
 {
   "elections": [
     {
-      "id": "5",
-      "name": "DemElection",
-      "sdate": "02-03-2021",
-      "location": "Surrey Uni",
+      "id": "1",
+      "name": "College of Podiatry",
+      "sdate": "20-10-2019",
       "start_time": "00:00",
-      "end_time": "23:00",
-      "description": "Test Election Demo",
-      "candidates": [
-        {
-          "id": 1,
-          "name": "Alice"
-        },
-        {
-          "id": 2,
-          "name": "Bob"
-        }
-      ]
+      "end_time": "23:30",
+      "edate": "22-10-2019",
+      "active": "false"
     },
     {
-      "id": "6",
+      "id": "2",
       "name": "GuildfordElection",
       "sdate": "11-03-2021",
       "start_time": "00:00",
       "end_time": "23:30",
-      "location": "Guildford",
+      "edate": "11-03-2021",
+      "active": "false",
       "candidates": [
         {
           "id": 1,
@@ -46,6 +37,37 @@
         {
           "id": 5,
           "name": "Marry John"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "HerokuTest",
+      "sdate": "15-03-2021",
+      "edate": "16-03-2021",
+      "start_time": "00:00",
+      "end_time": "23:00",
+      "active": "true",
+      "candidates": [
+        {
+          "id": "1",
+          "name": "Alice"
+        },
+        {
+          "id": "2",
+          "name": "Bob"
+        },
+        {
+          "id": "3",
+          "name": "Cenk"
+        },
+        {
+          "id": "4",
+          "name": "Doddy"
+        },
+        {
+          "id": "5",
+          "name": "Ely"
         }
       ]
     }

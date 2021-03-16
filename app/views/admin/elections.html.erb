@@ -16,6 +16,8 @@
       <ul class="navbar-nav">
       </ul>
     </div>
+              <%= button_to "Logout", {:controller => :admin, :action => :logout}, {:class=> 'btn btn-outline-primary' ,:style => "float: right"}%>
+
   </div>
 </nav>
 
@@ -25,11 +27,11 @@
 
     <div class="container" id="list">
 
-      <% if @ElectionArray["elections"].length == 0 %>
-            <h4> No elections </h4>
+      <% if @ElectionArray.length == 0 %>
+            <h4> No elections found ! </h4>
             <% else %>
                <div class="row">
-        <% for election in @ElectionArray["elections"] %>
+        <% for election in @ElectionArray %>
           <div class="col-lg-4 col-md-6 col-12 my-3">
             <div class="card text-black">
               <div class="card-header d-flex justify-content-between">
@@ -43,13 +45,14 @@
                   <span class="col-6 text-left">ID</span>
                   <span class="col-6 text-right"><%= election["id"] %></span>
                 </p>
-                <p class="card-title d-flex flex-row rounded mx-1">
-                  <span class="col-6 text-left">Location</span>
-                  <span class="col-6 text-right"><%= election["location"] %></span>
-                </p>
+               
                 <p class="card-title d-flex flex-row rounded mx-1">
                   <span class="col-6 text-left">Start Date</span>
                   <span class="col-6 text-right"><%= election["sdate"] %></span>
+                </p>
+                 <p class="card-title d-flex flex-row rounded mx-1">
+                  <span class="col-6 text-left">End Date</span>
+                  <span class="col-6 text-right"><%= election["edate"] %></span>
                 </p>
 
                 <p class="card-title d-flex flex-row mb-0">
