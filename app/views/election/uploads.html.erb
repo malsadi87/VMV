@@ -32,7 +32,7 @@
 <div class='container'>
 
 <h3> <%= params[:title]%> </h3>
-<p>You can download the data as a CSV file <%= link_to "Download", "/files/completed/#{params[:id]}/#{params[:file]}.csv", download: 'public-election-params.csv', class:"btn btn-secondary"%> </p> 
+<p>You can download the data as a CSV file <%= link_to "Download", "/files/completed/#{params[:id]}/#{params[:file]}.csv", download: "#{params[:file]}.csv", class:"btn btn-secondary"%> </p> 
 <p>File Headers :  <%= @fileContent.headers %></p><br>
 <div class="contentTable">
 <% index  = 1 %>

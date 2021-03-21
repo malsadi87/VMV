@@ -24200,3 +24200,1633 @@ Processing by VoterController#elections as HTML
 Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 9016)
 
 
+Started GET "/" for ::1 at 2021-03-19 23:04:24 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 44.6ms | Allocations: 10714)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 63.5ms | ActiveRecord: 0.0ms | Allocations: 21173)
+
+
+Started GET "/" for ::1 at 2021-03-19 23:04:25 +0300
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 569)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 8731)
+
+
+Started GET "/admin/index" for ::1 at 2021-03-19 23:04:29 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 1712)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms | Allocations: 10463)
+
+
+Started GET "/admin/index" for ::1 at 2021-03-19 23:04:30 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 754)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 8872)
+
+
+Started POST "/admin/index" for ::1 at 2021-03-19 23:04:39 +0300
+Processing by AdminController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"swPp4L9oYO2ONbGGTMf/J0E8/mbfYPGSnS9PaunwwhgazRmgWHBPH7CU+Jpa98OicD3P/IzRiyCrIUljXxZaLQ==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+Redirected to http://localhost:3000/admin/dashboard?name=admin%40admin.com
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1050)
+
+
+Started GET "/admin/dashboard?name=admin%40admin.com" for ::1 at 2021-03-19 23:04:39 +0300
+Processing by AdminController#dashboard as HTML
+  Parameters: {"name"=>"admin@admin.com"}
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1255)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 9580)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:04:41 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1581)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 9989)
+
+
+Started GET "/admin/startElection?election=HerokuTest" for ::1 at 2021-03-19 23:04:47 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"HerokuTest"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.7ms | Allocations: 190)
+UserMailer#welcome_email: processed outbound mail in 3.8ms
+Delivered mail 605503dfd197e_75a3fe57d1e989c6762@mohammeds-mbp.mail (5674.0ms)
+Date: Fri, 19 Mar 2021 23:04:47 +0300
+From: voteverify20@gmail.com
+To: m.alsadi@surrey.ac.uk
+Message-ID: <605503dfd197e_75a3fe57d1e989c6762@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h4>Dear Voter,</h4>
+    <p>
+      Welcome to Verify My Vote. This email contains :
+    .<br>
+    </p>
+    <ul>
+    <li> Beta commitment value </li>
+    </ul>
+    <p>3942756914434407108732433653083369810130231893576193577559851806878703675132206272333116233443256631423566589750813612103212058857957546468039033753775102811339717447794409207007684971488786990820681974454615957780227441878595697018400388710052359958173576354076706228339711109258774201681526178674285293799922570636151782710952420151471293371591448501287792252542227839304471365876535750399281129362260134933756778643022446978499686253892874581386082037890004508384183575320826764497425930902038236713860880015255258479596770300170745976321242174862315845727602817590962242289039748094853378332949679921541486248953326737312917411307274350490390165099058422197402015739400812806098206065817707609942526709279876911371039912428269185301369309984683460545807853489709026816091670960851010468835634977319731902351490049618007920053962477605641454846750072860138842472140974338535173139809818957009045571336780596567932418390521<br></p>
+    <ul>
+    <li> Eight-digits login code </li>
+    </ul>
+    <p>38122694<br></p>
+    <p>Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+<br></p>
+    <p>
+      To login to the site, just follow this link: <a href="https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest">https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest</a>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/elections
+Completed 302 Found in 5725ms (ActiveRecord: 0.0ms | Allocations: 22014)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:04:53 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1038)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 9326)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:07:48 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1688)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 10141)
+
+
+Started GET "/admin/startElection?election=HerokuTest" for ::1 at 2021-03-19 23:07:50 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"HerokuTest"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 13)
+UserMailer#welcome_email: processed outbound mail in 1.4ms
+Delivered mail 605504964c22d_75a3fe57d1e992867725@mohammeds-mbp.mail (5594.4ms)
+Date: Fri, 19 Mar 2021 23:07:50 +0300
+From: m16199@surrey.ac.uk
+To: m.alsadi@surrey.ac.uk
+Message-ID: <605504964c22d_75a3fe57d1e992867725@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h4>Dear Voter,</h4>
+    <p>
+      Welcome to Verify My Vote. This email contains :
+    .<br>
+    </p>
+    <ul>
+    <li> Beta commitment value </li>
+    </ul>
+    <p>3942756914434407108732433653083369810130231893576193577559851806878703675132206272333116233443256631423566589750813612103212058857957546468039033753775102811339717447794409207007684971488786990820681974454615957780227441878595697018400388710052359958173576354076706228339711109258774201681526178674285293799922570636151782710952420151471293371591448501287792252542227839304471365876535750399281129362260134933756778643022446978499686253892874581386082037890004508384183575320826764497425930902038236713860880015255258479596770300170745976321242174862315845727602817590962242289039748094853378332949679921541486248953326737312917411307274350490390165099058422197402015739400812806098206065817707609942526709279876911371039912428269185301369309984683460545807853489709026816091670960851010468835634977319731902351490049618007920053962477605641454846750072860138842472140974338535173139809818957009045571336780596567932418390521<br></p>
+    <ul>
+    <li> Eight-digits login code </li>
+    </ul>
+    <p>38122694<br></p>
+    <p>Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+<br></p>
+    <p>
+      To login to the site, just follow this link: <a href="https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest">https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest</a>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/elections
+Completed 302 Found in 5606ms (ActiveRecord: 0.0ms | Allocations: 8290)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:07:55 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1029)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 9321)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:14:07 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1688)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 10139)
+
+
+Started GET "/admin/startElection?election=HerokuTest" for ::1 at 2021-03-19 23:14:12 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"HerokuTest"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 13)
+UserMailer#welcome_email: processed outbound mail in 1.5ms
+Delivered mail 605506143dfbb_75a3fe57d1e981067812@mohammeds-mbp.mail (5504.1ms)
+Date: Fri, 19 Mar 2021 23:14:12 +0300
+From: vmv@surrey.ac.uk
+To: m.alsadi@surrey.ac.uk
+Message-ID: <605506143dfbb_75a3fe57d1e981067812@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h4>Dear Voter,</h4>
+    <p>
+      Welcome to Verify My Vote. This email contains :
+    .<br>
+    </p>
+    <ul>
+    <li> Beta commitment value </li>
+    </ul>
+    <p>3942756914434407108732433653083369810130231893576193577559851806878703675132206272333116233443256631423566589750813612103212058857957546468039033753775102811339717447794409207007684971488786990820681974454615957780227441878595697018400388710052359958173576354076706228339711109258774201681526178674285293799922570636151782710952420151471293371591448501287792252542227839304471365876535750399281129362260134933756778643022446978499686253892874581386082037890004508384183575320826764497425930902038236713860880015255258479596770300170745976321242174862315845727602817590962242289039748094853378332949679921541486248953326737312917411307274350490390165099058422197402015739400812806098206065817707609942526709279876911371039912428269185301369309984683460545807853489709026816091670960851010468835634977319731902351490049618007920053962477605641454846750072860138842472140974338535173139809818957009045571336780596567932418390521<br></p>
+    <ul>
+    <li> Eight-digits login code </li>
+    </ul>
+    <p>38122694<br></p>
+    <p>Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+<br></p>
+    <p>
+      To login to the site, just follow this link: <a href="https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest">https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest</a>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/elections
+Completed 302 Found in 5516ms (ActiveRecord: 0.0ms | Allocations: 8300)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:14:17 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1028)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 9319)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:18:49 +0300
+Processing by AdminController#elections as HTML
+Redirected to http://localhost:3000/admin/index
+Filter chain halted as :check_admin_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 343)
+
+
+Started GET "/admin/index" for ::1 at 2021-03-19 23:18:49 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 772)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 8898)
+
+
+Started POST "/admin/index" for ::1 at 2021-03-19 23:18:55 +0300
+Processing by AdminController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eSKQqCT6AxNoXJgQUHgpjeHXzctOhyeuUCL1EbXGDcUjinbo9YMLGbPKLpviF6f0LIyhTGuwGHFO/sC+CSPgdA==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+Redirected to http://localhost:3000/admin/dashboard?name=admin%40admin.com
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 426)
+
+
+Started GET "/admin/dashboard?name=admin%40admin.com" for ::1 at 2021-03-19 23:18:55 +0300
+Processing by AdminController#dashboard as HTML
+  Parameters: {"name"=>"admin@admin.com"}
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (Duration: 1.5ms | Allocations: 933)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 9083)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:18:56 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1025)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 9295)
+
+
+Started GET "/admin/startElection?election=HerokuTest" for ::1 at 2021-03-19 23:18:58 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"HerokuTest"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 10)
+UserMailer#welcome_email: processed outbound mail in 1.8ms
+Delivered mail 605507328c913_75a3fe57d1e99286797a@mohammeds-mbp.mail (5494.4ms)
+Date: Fri, 19 Mar 2021 23:18:58 +0300
+From: vmv@surrey.ac.uk
+To: m.alsadi@surrey.ac.uk
+Message-ID: <605507328c913_75a3fe57d1e99286797a@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h4>Dear Voter,</h4>
+    <p>
+      Welcome to Verify My Vote. This email contains :
+    .<br>
+    </p>
+    <ul>
+    <li> Beta commitment value </li>
+    </ul>
+    <p>3942756914434407108732433653083369810130231893576193577559851806878703675132206272333116233443256631423566589750813612103212058857957546468039033753775102811339717447794409207007684971488786990820681974454615957780227441878595697018400388710052359958173576354076706228339711109258774201681526178674285293799922570636151782710952420151471293371591448501287792252542227839304471365876535750399281129362260134933756778643022446978499686253892874581386082037890004508384183575320826764497425930902038236713860880015255258479596770300170745976321242174862315845727602817590962242289039748094853378332949679921541486248953326737312917411307274350490390165099058422197402015739400812806098206065817707609942526709279876911371039912428269185301369309984683460545807853489709026816091670960851010468835634977319731902351490049618007920053962477605641454846750072860138842472140974338535173139809818957009045571336780596567932418390521<br></p>
+    <ul>
+    <li> Eight-digits login code </li>
+    </ul>
+    <p>38122694<br></p>
+    <p>Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+<br></p>
+    <p>
+      To login to the site, just follow this link: <a href="https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest">https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest</a>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/elections
+Completed 302 Found in 5500ms (ActiveRecord: 0.0ms | Allocations: 5104)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:19:04 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1028)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 9315)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:22:16 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 15.7ms | Allocations: 1027)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 9295)
+
+
+Started GET "/admin/startElection?election=HerokuTest" for ::1 at 2021-03-19 23:22:18 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"HerokuTest"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 10)
+UserMailer#welcome_email: processed outbound mail in 1.8ms
+Delivered mail 605507fae8db_75a3fe57d1e98106808a@mohammeds-mbp.mail (5515.2ms)
+Date: Fri, 19 Mar 2021 23:22:18 +0300
+From: vmv@surrey.ac.uk
+To: m.alsadi@surrey.ac.uk
+Message-ID: <605507fae8db_75a3fe57d1e98106808a@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h4>Dear Voter,</h4>
+    <p>
+      Welcome to Verify My Vote. This email contains :
+    .<br>
+    </p>
+    <ul>
+    <li> Beta commitment value </li>
+    </ul>
+    <p>3942756914434407108732433653083369810130231893576193577559851806878703675132206272333116233443256631423566589750813612103212058857957546468039033753775102811339717447794409207007684971488786990820681974454615957780227441878595697018400388710052359958173576354076706228339711109258774201681526178674285293799922570636151782710952420151471293371591448501287792252542227839304471365876535750399281129362260134933756778643022446978499686253892874581386082037890004508384183575320826764497425930902038236713860880015255258479596770300170745976321242174862315845727602817590962242289039748094853378332949679921541486248953326737312917411307274350490390165099058422197402015739400812806098206065817707609942526709279876911371039912428269185301369309984683460545807853489709026816091670960851010468835634977319731902351490049618007920053962477605641454846750072860138842472140974338535173139809818957009045571336780596567932418390521<br></p>
+    <ul>
+    <li> Eight-digits login code </li>
+    </ul>
+    <p>38122694<br></p>
+    <p>Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+<br></p>
+    <p>
+      To login to the site, just follow this link: <a href="https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest">https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest</a>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin/elections
+Completed 302 Found in 5520ms (ActiveRecord: 0.0ms | Allocations: 5122)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:22:23 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1028)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 9315)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:26:13 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 20.9ms | Allocations: 12041)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 36.8ms | ActiveRecord: 0.0ms | Allocations: 22721)
+
+
+Started GET "/admin/startElection?election=HerokuTest" for ::1 at 2021-03-19 23:26:16 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"HerokuTest"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 1.9ms | Allocations: 190)
+UserMailer#welcome_email: processed outbound mail in 6.2ms
+Delivered mail 605508e8bffd0_9793fdb4a8130344669f@mohammeds-mbp.mail (5664.5ms)
+Date: Fri, 19 Mar 2021 23:26:16 +0300
+From: vmv@surrey.ac.uk
+To: m.alsadi@surrey.ac.uk
+Message-ID: <605508e8bffd0_9793fdb4a8130344669f@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h4>Dear Voter,</h4>
+    <p>
+      Welcome to Verify My Vote. This email contains :
+    .<br>
+    </p>
+    <ul>
+    <li> Beta commitment value </li>
+    </ul>
+    <p>3942756914434407108732433653083369810130231893576193577559851806878703675132206272333116233443256631423566589750813612103212058857957546468039033753775102811339717447794409207007684971488786990820681974454615957780227441878595697018400388710052359958173576354076706228339711109258774201681526178674285293799922570636151782710952420151471293371591448501287792252542227839304471365876535750399281129362260134933756778643022446978499686253892874581386082037890004508384183575320826764497425930902038236713860880015255258479596770300170745976321242174862315845727602817590962242289039748094853378332949679921541486248953326737312917411307274350490390165099058422197402015739400812806098206065817707609942526709279876911371039912428269185301369309984683460545807853489709026816091670960851010468835634977319731902351490049618007920053962477605641454846750072860138842472140974338535173139809818957009045571336780596567932418390521<br></p>
+    <ul>
+    <li> Eight-digits login code </li>
+    </ul>
+    <p>38122694<br></p>
+    <p>Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+<br></p>
+    <p>
+      To login to the site, just follow this link: <a href="https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest">https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest</a>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+Completed 500 Internal Server Error in 5709ms (ActiveRecord: 0.0ms | Allocations: 18058)
+
+
+  
+Net::SMTPAuthenticationError (535 5.7.3 Authentication unsuccessful [ZR0P278CA0002.CHEP278.PROD.OUTLOOK.COM]
+):
+  
+app/controllers/admin_controller.rb:68:in `block in startElection'
+app/controllers/admin_controller.rb:58:in `startElection'
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:33:24 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#elections as HTML
+Redirected to http://localhost:3000/admin/index
+Filter chain halted as :check_admin_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 424)
+
+
+Started GET "/admin/index" for ::1 at 2021-03-19 23:33:24 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1717)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 10145)
+
+
+Started GET "/admin/index" for ::1 at 2021-03-19 23:33:26 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 753)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 8862)
+
+
+Started POST "/admin/index" for ::1 at 2021-03-19 23:33:32 +0300
+Processing by AdminController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xzn9OTue3RCSimq+2mTvBfi+1ePSDAa97GkmFJfvHMvPjFXPRZbfBSXcB+KYANLTZeQJ/KPIdVi65FFoRVzC0A==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]"}}
+Redirected to http://localhost:3000/admin/dashboard?name=admin%40admin.com
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1040)
+
+
+Started GET "/admin/dashboard?name=admin%40admin.com" for ::1 at 2021-03-19 23:33:32 +0300
+Processing by AdminController#dashboard as HTML
+  Parameters: {"name"=>"admin@admin.com"}
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1249)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 9543)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:33:34 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1070)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 9336)
+
+
+Started GET "/admin/startElection?election=HerokuTest" for ::1 at 2021-03-19 23:33:36 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"HerokuTest"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 14)
+UserMailer#welcome_email: processed outbound mail in 1.4ms
+Delivered mail 60550aa075c82_9793fdb4a8130c046726@mohammeds-mbp.mail (5572.6ms)
+Date: Fri, 19 Mar 2021 23:33:36 +0300
+From: from@example.com
+To: m.alsadi@surrey.ac.uk
+Message-ID: <60550aa075c82_9793fdb4a8130c046726@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h4>Dear Voter,</h4>
+    <p>
+      Welcome to Verify My Vote. This email contains :
+    .<br>
+    </p>
+    <ul>
+    <li> Beta commitment value </li>
+    </ul>
+    <p>3942756914434407108732433653083369810130231893576193577559851806878703675132206272333116233443256631423566589750813612103212058857957546468039033753775102811339717447794409207007684971488786990820681974454615957780227441878595697018400388710052359958173576354076706228339711109258774201681526178674285293799922570636151782710952420151471293371591448501287792252542227839304471365876535750399281129362260134933756778643022446978499686253892874581386082037890004508384183575320826764497425930902038236713860880015255258479596770300170745976321242174862315845727602817590962242289039748094853378332949679921541486248953326737312917411307274350490390165099058422197402015739400812806098206065817707609942526709279876911371039912428269185301369309984683460545807853489709026816091670960851010468835634977319731902351490049618007920053962477605641454846750072860138842472140974338535173139809818957009045571336780596567932418390521<br></p>
+    <ul>
+    <li> Eight-digits login code </li>
+    </ul>
+    <p>38122694<br></p>
+    <p>Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+<br></p>
+    <p>
+      To login to the site, just follow this link: <a href="https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest">https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest</a>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+Completed 500 Internal Server Error in 5584ms (ActiveRecord: 0.0ms | Allocations: 7893)
+
+
+  
+Net::SMTPAuthenticationError (535 5.7.3 Authentication unsuccessful [ZR0P278CA0134.CHEP278.PROD.OUTLOOK.COM]
+):
+  
+app/controllers/admin_controller.rb:68:in `block in startElection'
+app/controllers/admin_controller.rb:58:in `startElection'
+Started GET "/admin/elections" for ::1 at 2021-03-19 23:48:10 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AdminController#elections as HTML
+Redirected to http://localhost:3000/admin/index
+Filter chain halted as :check_admin_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 337)
+
+
+Started GET "/admin/index" for ::1 at 2021-03-19 23:48:10 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 759)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 8881)
+
+
+Started GET "/" for ::1 at 2021-03-19 23:48:12 +0300
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 906)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 9639)
+
+
+Started GET "/election/index" for ::1 at 2021-03-19 23:48:13 +0300
+Processing by ElectionController#index as HTML
+  Rendering election/index.html.erb within layouts/application
+  Rendered election/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1062)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 9785)
+
+
+Started GET "/election/view?id=2" for ::1 at 2021-03-19 23:48:14 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"2"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 5.8ms | Allocations: 4557)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 12800)
+
+
+Started GET "/election/uploads?file=public-election-keys-1&id=2&title=Election+Public+Key" for ::1 at 2021-03-19 23:48:22 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-election-keys-1", "id"=>"2", "title"=>"Election Public Key"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 588)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - public/files/completed/2/public-election-keys-1.csv):
+  
+app/controllers/election_controller.rb:17:in `read'
+app/controllers/election_controller.rb:17:in `uploads'
+Started GET "/election/view?id=2" for ::1 at 2021-03-19 23:48:32 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"2"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3305)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 11410)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-19 23:54:17 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 3.4ms | Allocations: 3303)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 11402)
+
+
+Started GET "/election/uploads?file=public-election-keys-1&id=1&title=Election+Public+Key" for ::1 at 2021-03-19 23:54:21 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-election-keys-1", "id"=>"1", "title"=>"Election Public Key"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1428)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 9797)
+
+
+Started GET "/election/uploads?file=public-election-keys-2&id=1&title=Election+Public+Key" for ::1 at 2021-03-19 23:54:29 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-election-keys-2", "id"=>"1", "title"=>"Election Public Key"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1.7ms | Allocations: 902)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 9124)
+
+
+Started GET "/election/uploads?file=public-tracker-numbers&id=1&title=Tracker+Numbers" for ::1 at 2021-03-19 23:54:38 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-tracker-numbers", "id"=>"1", "title"=>"Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1008.3ms | Allocations: 1328226)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1081ms (Views: 1022.7ms | ActiveRecord: 0.0ms | Allocations: 1403497)
+
+
+Started GET "/election/view?id=2" for ::1 at 2021-03-19 23:55:05 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"2"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 3.3ms | Allocations: 3303)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 11406)
+
+
+Started GET "/election/uploads?file=public-tracker-numbers&id=2&title=Tracker+Numbers" for ::1 at 2021-03-19 23:55:07 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-tracker-numbers", "id"=>"2", "title"=>"Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 11955)
+
+
+Started GET "/election/uploads?file=shuffled-tracker-numbers-1&id=2&title=Shuffled+and+Encrypted+Tracker+Numbers" for ::1 at 2021-03-19 23:57:01 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"shuffled-tracker-numbers-1", "id"=>"2", "title"=>"Shuffled and Encrypted Tracker Numbers"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 587)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - public/files/completed/2/shuffled-tracker-numbers-1.csv):
+  
+app/controllers/election_controller.rb:17:in `read'
+app/controllers/election_controller.rb:17:in `uploads'
+Started GET "/election/view?id=2" for ::1 at 2021-03-19 23:57:05 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"2"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 3.5ms | Allocations: 3304)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 11407)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-19 23:59:20 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3303)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 11411)
+
+
+Started GET "/election/uploads?file=shuffled-tracker-numbers-1&id=1&title=Shuffled+and+Encrypted+Tracker+Numbers" for ::1 at 2021-03-19 23:59:27 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"shuffled-tracker-numbers-1", "id"=>"1", "title"=>"Shuffled and Encrypted Tracker Numbers"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 590)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - public/files/completed/1/shuffled-tracker-numbers-1.csv):
+  
+app/controllers/election_controller.rb:17:in `read'
+app/controllers/election_controller.rb:17:in `uploads'
+Started GET "/election/view?id=1" for ::1 at 2021-03-19 23:59:30 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3304)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 11407)
+
+
+Started GET "/election/uploads?file=shuffled-tracker-numbers-1&id=1&title=Shuffled+and+Encrypted+Tracker+Numbers" for ::1 at 2021-03-19 23:59:35 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"shuffled-tracker-numbers-1", "id"=>"1", "title"=>"Shuffled and Encrypted Tracker Numbers"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 587)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - public/files/completed/1/shuffled-tracker-numbers-1.csv):
+  
+app/controllers/election_controller.rb:17:in `read'
+app/controllers/election_controller.rb:17:in `uploads'
+Started GET "/election/view?id=1" for ::1 at 2021-03-19 23:59:38 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3304)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 11404)
+
+
+Started GET "/election/uploads?file=shuffled-tracker-numbers-2&id=1&title=Shuffled+and+Encrypted+Tracker+Numbers" for ::1 at 2021-03-19 23:59:41 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"shuffled-tracker-numbers-2", "id"=>"1", "title"=>"Shuffled and Encrypted Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 984.9ms | Allocations: 1274579)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1035ms (Views: 999.8ms | ActiveRecord: 0.0ms | Allocations: 1327495)
+
+
+Started GET "/election/uploads?file=shuffled-tracker-numbers-3&id=1&title=Shuffled+and+Encrypted+Tracker+Numbers" for ::1 at 2021-03-20 00:00:01 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"shuffled-tracker-numbers-3", "id"=>"1", "title"=>"Shuffled and Encrypted Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 917.9ms | Allocations: 1274580)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 956ms (Views: 927.4ms | ActiveRecord: 0.0ms | Allocations: 1327495)
+
+
+Started GET "/election/uploads?file=public-commitments-1&id=1&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:00:28 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-1", "id"=>"1", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1195.3ms | Allocations: 1305876)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1271ms (Views: 1212.2ms | ActiveRecord: 0.0ms | Allocations: 1372209)
+
+
+Started GET "/election/uploads?file=public-commitments-2&id=1&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:00:51 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-2", "id"=>"1", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1095.7ms | Allocations: 1305877)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1174ms (Views: 1111.2ms | ActiveRecord: 0.0ms | Allocations: 1372204)
+
+
+Started GET "/election/uploads?file=public-commitments-1&id=1&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:01:19 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-1", "id"=>"1", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1295.5ms | Allocations: 1305874)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1382ms (Views: 1312.5ms | ActiveRecord: 0.0ms | Allocations: 1372202)
+
+
+Started GET "/election/index" for ::1 at 2021-03-20 00:09:26 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ElectionController#index as HTML
+  Rendering election/index.html.erb within layouts/application
+  Rendered election/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1056)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 10141)
+
+
+Started GET "/election/view?id=2" for ::1 at 2021-03-20 00:09:28 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"2"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3273)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 11520)
+
+
+Started GET "/election/uploads?file=public-election-params&id=2&title=Election+Parameters" for ::1 at 2021-03-20 00:09:34 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-election-params", "id"=>"2", "title"=>"Election Parameters"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1445)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 9844)
+
+
+Started GET "/election/uploads?file=public-election-keys&id=2&title=Election+Public+Key" for ::1 at 2021-03-20 00:09:37 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-election-keys", "id"=>"2", "title"=>"Election Public Key"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1.6ms | Allocations: 902)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 9119)
+
+
+Started GET "/election/uploads?file=public-tracker-numbers&id=2&title=Tracker+Numbers" for ::1 at 2021-03-20 00:09:41 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-tracker-numbers", "id"=>"2", "title"=>"Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 11954)
+
+
+Started GET "/election/uploads?file=shuffled-tracker-numbers&id=2&title=Shuffled+and+Encrypted+Tracker+Numbers" for ::1 at 2021-03-20 00:09:47 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"shuffled-tracker-numbers", "id"=>"2", "title"=>"Shuffled and Encrypted Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 3.7ms | Allocations: 3469)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 11777)
+
+
+Started GET "/election/uploads?file=public-voters-keys&id=2&title=Voter+Public+Keys" for ::1 at 2021-03-20 00:10:00 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-voters-keys", "id"=>"2", "title"=>"Voter Public Keys"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3539)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 11883)
+
+
+Started GET "/election/uploads?file=public-commitments-1&id=2&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:10:05 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-1", "id"=>"2", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 11985)
+
+
+Started GET "/election/uploads?file=public-commitments-2&id=2&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:10:12 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-2", "id"=>"2", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 11983)
+
+
+Started GET "/election/uploads?file=commitments-proofs-1&id=2&title=Teller+Public+Commitments+Proofs" for ::1 at 2021-03-20 00:10:17 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"commitments-proofs-1", "id"=>"2", "title"=>"Teller Public Commitments Proofs"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 5.3ms | Allocations: 5123)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 14181)
+
+
+Started GET "/election/uploads?file=public-voters&id=2&title=Voter+Public+Keys+with+Encrypted+Tracker+Numbers" for ::1 at 2021-03-20 00:10:26 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-voters", "id"=>"2", "title"=>"Voter Public Keys with Encrypted Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3683)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 12099)
+
+
+Started GET "/election/uploads?file=public-encrypted-voters&id=2&title=Encrypted+Votes+with+Tracker+Numbers" for ::1 at 2021-03-20 00:10:35 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-encrypted-voters", "id"=>"2", "title"=>"Encrypted Votes with Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 4.7ms | Allocations: 3827)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 12304)
+
+
+Started GET "/election/uploads?file=encrypt-proofs&id=2&title=Encrypted+Votes+with+Tracker+Numbers+Proofs" for ::1 at 2021-03-20 00:10:45 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"encrypt-proofs", "id"=>"2", "title"=>"Encrypted Votes with Tracker Numbers Proofs"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3755)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 12207)
+
+
+Started GET "/election/uploads?file=public-mixed-voters&id=2&title=Final+Votes" for ::1 at 2021-03-20 00:10:49 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-mixed-voters", "id"=>"2", "title"=>"Final Votes"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 19.0ms | Allocations: 3490)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 11815)
+
+
+Started GET "/election/index" for ::1 at 2021-03-20 00:11:01 +0300
+Processing by ElectionController#index as HTML
+  Rendering election/index.html.erb within layouts/application
+  Rendered election/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 8909)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-20 00:11:03 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2358)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 10457)
+
+
+Started GET "/election/uploads?file=public-election-params&id=1&title=Election+Parameters" for ::1 at 2021-03-20 00:11:04 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-election-params", "id"=>"1", "title"=>"Election Parameters"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 2.0ms | Allocations: 958)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 9216)
+
+
+Started GET "/election/uploads?file=public-election-keys&id=1&title=Election+Public+Key" for ::1 at 2021-03-20 00:11:08 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-election-keys", "id"=>"1", "title"=>"Election Public Key"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 1.7ms | Allocations: 902)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 9124)
+
+
+Started GET "/election/uploads?file=public-tracker-numbers&id=1&title=Tracker+Numbers" for ::1 at 2021-03-20 00:11:11 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-tracker-numbers", "id"=>"1", "title"=>"Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 941.5ms | Allocations: 1328234)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1005ms (Views: 957.9ms | ActiveRecord: 0.0ms | Allocations: 1403506)
+
+
+Started GET "/election/uploads?file=shuffled-tracker-numbers&id=1&title=Shuffled+and+Encrypted+Tracker+Numbers" for ::1 at 2021-03-20 00:11:21 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"shuffled-tracker-numbers", "id"=>"1", "title"=>"Shuffled and Encrypted Tracker Numbers"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 923.0ms | Allocations: 1274584)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 966ms (Views: 933.8ms | ActiveRecord: 0.0ms | Allocations: 1327503)
+
+
+Started GET "/election/uploads?file=public-voters-keys&id=1&title=Voter+Public+Keys" for ::1 at 2021-03-20 00:11:32 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-voters-keys", "id"=>"1", "title"=>"Voter Public Keys"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 913.6ms | Allocations: 1305874)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 974ms (Views: 927.7ms | ActiveRecord: 0.0ms | Allocations: 1372201)
+
+
+Started GET "/election/uploads?file=encrypt-proofs&id=1&title=Encrypted+Votes+with+Tracker+Numbers+Proofs" for ::1 at 2021-03-20 00:11:44 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"encrypt-proofs", "id"=>"1", "title"=>"Encrypted Votes with Tracker Numbers Proofs"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 83.6ms | Allocations: 99223)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 107ms (Views: 92.2ms | ActiveRecord: 0.0ms | Allocations: 114688)
+
+
+Started GET "/election/uploads?file=public-mixed-voters&id=1&title=Final+Votes" for ::1 at 2021-03-20 00:11:49 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-mixed-voters", "id"=>"1", "title"=>"Final Votes"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 78.7ms | Allocations: 91970)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 90ms (Views: 87.4ms | ActiveRecord: 0.0ms | Allocations: 103650)
+
+
+Started GET "/election/uploads?file=public-mixed-voters&id=1&title=Final+Votes" for ::1 at 2021-03-20 00:12:01 +0300
+Processing by ElectionController#uploads as */*
+  Parameters: {"file"=>"public-mixed-voters", "id"=>"1", "title"=>"Final Votes"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 81.4ms | Allocations: 91970)
+Started POST "/election/record" for ::1 at 2021-03-20 00:12:01 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ElectionController#record as HTML
+  Parameters: {"authenticity_token"=>"weCE7QRK3xet5ubRwENobLnLmFoxCP9X2UjuiU8B3z/suBNyIb1S7tXWaJtw0p4g07BE7PFSlLv7MVNr3jiCCA==", "headers"=>"plainTextVote,trackerNumber", "row"=>" Contest:[Private Practice Members Representatives][ Canney Ciaran] ,11935275\r\n"}
+  Rendering election/record.html.erb within layouts/application
+  Rendered election/record.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1979)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 104ms (Views: 101.6ms | ActiveRecord: 0.0ms | Allocations: 112692)
+
+
+Started GET "/election/uploads?file=public-mixed-voters&id=1&title=Final+Votes" for ::1 at 2021-03-20 00:12:01 +0300
+Processing by ElectionController#uploads as */*
+  Parameters: {"file"=>"public-mixed-voters", "id"=>"1", "title"=>"Final Votes"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 75.7ms | Allocations: 92013)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 99.9ms | ActiveRecord: 0.0ms | Allocations: 115802)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 0.0ms | Allocations: 104803)
+
+
+Started GET "/election/uploads?file=public-mixed-voters&id=1&title=Final+Votes" for ::1 at 2021-03-20 00:12:01 +0300
+Processing by ElectionController#uploads as */*
+  Parameters: {"file"=>"public-mixed-voters", "id"=>"1", "title"=>"Final Votes"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 80.4ms | Allocations: 91972)
+Started GET "/election/uploads?file=public-mixed-voters&id=1&title=Final+Votes" for ::1 at 2021-03-20 00:12:01 +0300
+Processing by ElectionController#uploads as */*
+  Parameters: {"file"=>"public-mixed-voters", "id"=>"1", "title"=>"Final Votes"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 82.3ms | Allocations: 93561)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 190ms (Views: 181.2ms | ActiveRecord: 0.0ms | Allocations: 207742)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 98.8ms | ActiveRecord: 0.0ms | Allocations: 111351)
+
+
+Started GET "/election/uploads?file=public-mixed-voters&id=1&title=Final+Votes" for ::1 at 2021-03-20 00:12:10 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-mixed-voters", "id"=>"1", "title"=>"Final Votes"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 80.6ms | Allocations: 91970)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 88.6ms | ActiveRecord: 0.0ms | Allocations: 103657)
+
+
+Started GET "/election/uploads?file=public-mixed-voters&id=1&title=Final+Votes" for ::1 at 2021-03-20 00:12:12 +0300
+Processing by ElectionController#uploads as */*
+  Parameters: {"file"=>"public-mixed-voters", "id"=>"1", "title"=>"Final Votes"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 86.5ms | Allocations: 91971)
+Started POST "/election/record" for ::1 at 2021-03-20 00:12:12 +0300
+Processing by ElectionController#record as HTML
+  Parameters: {"authenticity_token"=>"I0HjCf+QtgP1JqyG7xbt6XT5LxmWQ8kC6OGnn7gw9cndM4NbcNIAnpXDf9fxhBuNV+tCd2WHdrUHO7e8b/Gcmw==", "headers"=>"plainTextVote,trackerNumber", "row"=>" Contest:[Private Practice Members Representatives][ Canney Ciaran] ,17889346\r\n"}
+  Rendering election/record.html.erb within layouts/application
+  Rendered election/record.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2136)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 107ms (Views: 105.5ms | ActiveRecord: 0.0ms | Allocations: 112699)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 16482)
+
+
+Started GET "/election/uploads?file=public-mixed-voters&id=1&title=Final+Votes" for ::1 at 2021-03-20 00:12:19 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-mixed-voters", "id"=>"1", "title"=>"Final Votes"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 98.5ms | Allocations: 91970)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 118ms (Views: 115.9ms | ActiveRecord: 0.0ms | Allocations: 103651)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-20 00:12:28 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2358)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 50.6ms | ActiveRecord: 0.0ms | Allocations: 10463)
+
+
+Started GET "/election/view?id=2" for ::1 at 2021-03-20 00:14:59 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"2"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3410)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 12449)
+
+
+Started GET "/election/uploads?file=public-vote-options&id=2&title=Vote+Choices" for ::1 at 2021-03-20 00:15:02 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-vote-options", "id"=>"2", "title"=>"Vote Choices"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2556)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 10975)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-20 00:15:20 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2463)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 10570)
+
+
+Started GET "/election/uploads?file=public-vote-options&id=1&title=Vote+Choices" for ::1 at 2021-03-20 00:15:23 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-vote-options", "id"=>"1", "title"=>"Vote Choices"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 6.9ms | Allocations: 6459)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 14933)
+
+
+Started POST "/election/record" for ::1 at 2021-03-20 00:15:31 +0300
+Processing by ElectionController#record as HTML
+  Parameters: {"authenticity_token"=>"jebdT70O9rPis1VfAANTmvae+k3s+IiWf+A63zHVON2gvkrQmPl7SpqD2xWwkqXWnOUm+yyi43pdmYc9oOxl6g==", "headers"=>"option,optionNumberInGroup", "row"=>" Contest:[Private Practice Members Representatives][ Sagar Indie] [ Scott Michelle] ,1845771590210817903838002998834108686771805110790399232934809824924447007808364170213389906577381548149324922942071996697282944192198058892661026539101676050686116861317222870266161397287248924980013775298358414380975495113490794070186279828519525460689727202300232756845005182403185135088886857256995082229520953994985507370775773230917938233037977739841422017180177921338323107386905027141915227431916906642616566407942174061719247361879678490665160122456991605895796242715770113689762268344436207527019733229346495898735746845884795290517107363394190058156174310782534874307655893112565776386919300413059954308490118155633535810061280475461277853665471297517075280283449902908987431253285323990637892460478387905755963543794725075095233139668356814169088978491037497324395743606816416818328369969191333644032802189222724975684166253859641953937314318694953959970692038822136386472075926818441103227367458648192625990995644\r\n"}
+  Rendering election/record.html.erb within layouts/application
+  Rendered election/record.html.erb within layouts/application (Duration: 2.2ms | Allocations: 815)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 9125)
+
+
+Started GET "/election/uploads?file=public-vote-options&id=1&title=Vote+Choices" for ::1 at 2021-03-20 00:15:36 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-vote-options", "id"=>"1", "title"=>"Vote Choices"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 6.1ms | Allocations: 6466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 14941)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-20 00:15:39 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2463)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 10570)
+
+
+Started GET "/election/view?id=2" for ::1 at 2021-03-20 00:19:31 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"2"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2463)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 10566)
+
+
+Started GET "/election/uploads?file=public-voters-keys&id=2&title=Voter+Public+Keys" for ::1 at 2021-03-20 00:21:19 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-voters-keys", "id"=>"2", "title"=>"Voter Public Keys"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3539)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 11883)
+
+
+Started GET "/election/uploads?file=public-commitments-1&id=2&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:21:27 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-1", "id"=>"2", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 19.2ms | Allocations: 3612)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 11984)
+
+
+Started GET "/election/uploads?file=public-commitments-2&id=2&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:21:32 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-2", "id"=>"2", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 11991)
+
+
+Started GET "/election/uploads?file=public-commitments-3&id=2&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:21:40 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-3", "id"=>"2", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 11983)
+
+
+Started GET "/election/uploads?file=public-commitments-1&id=2&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:21:53 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-1", "id"=>"2", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 11984)
+
+
+Started GET "/election/uploads?file=public-commitments-1&id=2&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:22:02 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-1", "id"=>"2", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 6.4ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 11986)
+
+
+Started GET "/election/uploads?file=public-commitments-2&id=2&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:22:06 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-2", "id"=>"2", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 11987)
+
+
+Started GET "/election/uploads?file=public-commitments-3&id=2&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:22:12 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-3", "id"=>"2", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 11986)
+
+
+Started GET "/election/uploads?file=public-commitments-1&id=2&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:22:17 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-1", "id"=>"2", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 11981)
+
+
+Started GET "/election/view?id=2" for ::1 at 2021-03-20 00:23:43 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"2"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3404)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 12440)
+
+
+Started GET "/election/uploads?file=public-commitments-4&id=2&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:23:46 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-4", "id"=>"2", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 5.5ms | Allocations: 4098)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.0ms | Allocations: 12617)
+
+
+Started GET "/election/uploads?file=public-commitments-4&id=2&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:25:05 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-4", "id"=>"2", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 4.9ms | Allocations: 4108)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 13416)
+
+
+Started GET "/election/view?id=2" for ::1 at 2021-03-20 00:25:22 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"2"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3398)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 11649)
+
+
+Started GET "/election/uploads?file=public-commitments-2&id=2&title=Teller+Public+Commitments" for ::1 at 2021-03-20 00:25:25 +0300
+Processing by ElectionController#uploads as HTML
+  Parameters: {"file"=>"public-commitments-2", "id"=>"2", "title"=>"Teller Public Commitments"}
+  Rendering election/uploads.html.erb within layouts/application
+  Rendered election/uploads.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3614)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 11988)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-20 00:25:48 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2463)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 10566)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-20 00:36:55 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 4.3ms | Allocations: 4040)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 13076)
+
+
+Started GET "/election/view?id=2" for ::1 at 2021-03-20 00:37:39 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"2"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2818)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 10922)
+
+
+Started GET "/election/view?id=2" for ::1 at 2021-03-20 00:37:40 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"2"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2811)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 10910)
+
+
+Started GET "/" for ::1 at 2021-03-22 00:45:27 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 57.3ms | Allocations: 10713)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 104ms (Views: 95.0ms | ActiveRecord: 0.0ms | Allocations: 21173)
+
+
+Started GET "/" for ::1 at 2021-03-22 00:45:28 +0300
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 569)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 8731)
+
+
+Started GET "/admin/index" for ::1 at 2021-03-22 00:45:33 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 1712)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 10465)
+
+
+Started GET "/admin/index" for ::1 at 2021-03-22 00:45:34 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 754)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 8862)
+
+
+Started POST "/admin/index" for ::1 at 2021-03-22 00:45:48 +0300
+Processing by AdminController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C15+6IaMqRxncNFBk1JqMBCQ0SUWgTbJRnMUvJAdMFQ0WWyuZvOE2e6V5tF/f3TYim4VxtDSHLnB9ab6bqpiZA==", "user"=>{"email"=>"s.schneider@surrey.ac.uk", "password"=>"[FILTERED]"}}
+Redirected to http://localhost:3000/admin/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/admin/index" for ::1 at 2021-03-22 00:45:48 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 754)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 8876)
+
+
+Started POST "/admin/index" for ::1 at 2021-03-22 00:46:03 +0300
+Processing by AdminController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E7Xd69lSbiW0oHaLAkZiJ3a7Sa7oguzsnPslhUWrofcsss+tOS1D4D1FQRvua3zP7EWNTS7RxpwbfZfDuxzzxw==", "user"=>{"email"=>"s.schneider@surrey.ac.uk", "password"=>"[FILTERED]"}}
+Redirected to http://localhost:3000/admin/dashboard?name=s.schneider%40surrey.ac.uk
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 446)
+
+
+Started GET "/admin/dashboard?name=s.schneider%40surrey.ac.uk" for ::1 at 2021-03-22 00:46:03 +0300
+Processing by AdminController#dashboard as HTML
+  Parameters: {"name"=>"s.schneider@surrey.ac.uk"}
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1256)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 9578)
+
+
+Started GET "/admin/elections" for ::1 at 2021-03-22 00:46:06 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1580)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 9983)
+
+
+Started GET "/admin/startElection?election=HerokuTest" for ::1 at 2021-03-22 00:46:13 +0300
+Processing by AdminController#startElection as HTML
+  Parameters: {"election"=>"HerokuTest"}
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.9ms | Allocations: 189)
+UserMailer#welcome_email: processed outbound mail in 5.1ms
+Delivered mail 6057bea5e672c_27ae3fecea0a1628357d9@mohammeds-mbp.mail (5654.5ms)
+Date: Mon, 22 Mar 2021 00:46:13 +0300
+From: from@example.com
+To: m.alsadi@surrey.ac.uk
+Message-ID: <6057bea5e672c_27ae3fecea0a1628357d9@mohammeds-mbp.mail>
+Subject: VMV: Login Credential
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h4>Dear Voter,</h4>
+    <p>
+      Welcome to Verify My Vote. This email contains :
+    .<br>
+    </p>
+    <ul>
+    <li> Beta commitment value </li>
+    </ul>
+    <p>3942756914434407108732433653083369810130231893576193577559851806878703675132206272333116233443256631423566589750813612103212058857957546468039033753775102811339717447794409207007684971488786990820681974454615957780227441878595697018400388710052359958173576354076706228339711109258774201681526178674285293799922570636151782710952420151471293371591448501287792252542227839304471365876535750399281129362260134933756778643022446978499686253892874581386082037890004508384183575320826764497425930902038236713860880015255258479596770300170745976321242174862315845727602817590962242289039748094853378332949679921541486248953326737312917411307274350490390165099058422197402015739400812806098206065817707609942526709279876911371039912428269185301369309984683460545807853489709026816091670960851010468835634977319731902351490049618007920053962477605641454846750072860138842472140974338535173139809818957009045571336780596567932418390521<br></p>
+    <ul>
+    <li> Eight-digits login code </li>
+    </ul>
+    <p>38122694<br></p>
+    <p>Beta value is a commitment proof which is used in verification. While code is a login credential, please keep it secure.
+<br></p>
+    <p>
+      To login to the site, just follow this link: <a href="https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest">https://vmv1.surrey.ac.uk/voter/login?election=HerokuTest</a>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+
+  </body>
+</html>
+
+Completed 500 Internal Server Error in 5701ms (ActiveRecord: 0.0ms | Allocations: 18047)
+
+
+  
+Net::SMTPAuthenticationError (535 5.7.3 Authentication unsuccessful [ZR0P278CA0078.CHEP278.PROD.OUTLOOK.COM]
+):
+  
+app/controllers/admin_controller.rb:68:in `block in startElection'
+app/controllers/admin_controller.rb:58:in `startElection'
+Started GET "/admin/elections" for ::1 at 2021-03-22 00:46:25 +0300
+Processing by AdminController#elections as HTML
+  Rendering admin/elections.html.erb within layouts/application
+  Rendered admin/elections.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1055)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 9342)
+
+
+Started GET "/admin/dashboard" for ::1 at 2021-03-22 00:50:19 +0300
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (Duration: 1.9ms | Allocations: 918)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 9066)
+
+
+Started GET "/" for ::1 at 2021-03-22 01:05:32 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (Duration: 51.1ms | Allocations: 10710)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 78.5ms | ActiveRecord: 0.0ms | Allocations: 21252)
+
+
+Started GET "/election/view?id=1" for ::1 at 2021-03-22 01:05:34 +0300
+Processing by ElectionController#view as HTML
+  Parameters: {"id"=>"1"}
+  Rendering election/view.html.erb within layouts/application
+  Rendered election/view.html.erb within layouts/application (Duration: 11.2ms | Allocations: 4702)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms | Allocations: 13403)
+
+
+Started GET "/voter/elections" for ::1 at 2021-03-22 01:05:53 +0300
+Processing by VoterController#elections as HTML
+  Rendering voter/elections.html.erb within layouts/application
+  Rendered voter/elections.html.erb within layouts/application (Duration: 15.2ms | Allocations: 1052)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.0ms | Allocations: 9978)
+
+
+Started GET "/voter/elections" for ::1 at 2021-03-22 01:05:54 +0300
+Processing by VoterController#elections as HTML
+  Rendering voter/elections.html.erb within layouts/application
+  Rendered voter/elections.html.erb within layouts/application (Duration: 1.0ms | Allocations: 577)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 8898)
+
+
+Started GET "/admin/index" for ::1 at 2021-03-22 01:06:03 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1100)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 9845)
+
+
+Started GET "/admin/index" for ::1 at 2021-03-22 01:06:04 +0300
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 751)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 8871)
+
+

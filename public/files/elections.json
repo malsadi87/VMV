@@ -47,7 +47,7 @@
       "edate": "16-03-2021",
       "start_time": "00:00",
       "end_time": "23:00",
-      "active": "true",
+      "active": "false",
       "candidates": [
         {
           "id": "1",

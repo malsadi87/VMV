@@ -62,6 +62,20 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+    # SMTP settings for gmail
+    config.action_mailer.perform_deliveries = true 
+    config.action_mailer.raise_delivery_errors = true
+  
+     config.action_mailer.smtp_settings = {
+         :address              => "smtp.office365.com", #"smtp.gmail.com",
+         :port                 => 587,
+         :user_name            => Rails.application.credentials.surrey.dig(:username),
+         :password             => Rails.application.credentials.surrey.dig(:password),
+         :authentication       => :login,
+         :domain               => Rails.application.credentials.surrey.dig(:domain),
+         :enable_starttls_auto => true
+     }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false

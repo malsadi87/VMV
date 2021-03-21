@@ -1,6 +1,6 @@
 class UserMailer < ApplicationMailer
     helper :application
-    default from: Rails.application.credentials.gmail[:user_name]
+    #default from: "vmv@surrey.ac.uk" #Rails.application.credentials.gmail[:user_name]
   
     def welcome_email(receiver)
       puts "the mail will be sent to "

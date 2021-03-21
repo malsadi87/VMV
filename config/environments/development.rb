@@ -63,15 +63,19 @@ Rails.application.configure do
 
    # Mailer custom configuration
    config.action_mailer.delivery_method = :smtp
-   host = 'localhost:3000'
-   config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http' }
+   #host = 'localhost:3000'
+   #config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http' }
    # SMTP settings for gmail
+  config.action_mailer.perform_deliveries = true 
+  config.action_mailer.raise_delivery_errors = true
+
    config.action_mailer.smtp_settings = {
-       :address              => "smtp.gmail.com",
+       :address              => "smtp.office365.com", #"smtp.gmail.com",
        :port                 => 587,
-       :user_name            => Rails.application.credentials.gmail.dig(:user_name),
-       :password             => Rails.application.credentials.gmail.dig(:password),
-       :authentication       => "plain",
+       :user_name            => Rails.application.credentials.surrey.dig(:username),
+       :password             => Rails.application.credentials.surrey.dig(:password),
+       :authentication       => :login,
+       :domain               => Rails.application.credentials.surrey.dig(:domain),
        :enable_starttls_auto => true
    }
 
