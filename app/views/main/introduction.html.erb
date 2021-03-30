@@ -1,0 +1,77 @@
+<br><br><br><br><br><br>
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top" style="background:white;">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="/main">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/main/introduction">Introduction</a></li>
+        <li class="nav-item"><a class="nav-link" href="/main/about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/main/documents">Documents</a></li>
+        <li class="nav-item"><a class="nav-link" href="/election/index">Elections</a></li>
+        <li class="nav-item" ><a class="nav-link" href="/main/verifiable">Verifiable Voting</a></li>
+       </ul>
+      <ul class="navbar-nav">
+      </ul>
+    </div>
+    <p><a class="nav-link" href="/voter/elections"> Voter <a/> </p>
+		<p><a class="nav-link" href="/admin/index"> Admin </a> </p>
+  </div>
+</nav>
+<div class='container'>
+<div class="jumbotron bg-white border mb-0 py-5">
+  <h1>Introduction</h1>
+  <p>
+   Verify My Vote (VMV) adds vote verification to a voting system. This allows a voter to confirm that the vote they cast is correctly stored by the system, ensuring that it will be included in the overall count. All votes are published anonymously, meaning that the tally for the election can be independently checked. 
+  </p>
+  <h3>Voter View</h3>
+  <p> The voter casts her vote in the normal way: by selecting her choice and submitting it into the system. </p>
+
+      <%= image_tag  "img1.png" %>
+  <p> At the end of the election, all of the votes are published, with a unique tracker number against each one. </p>
+  <%= image_tag  "img2.png" %>
+  <p> Each voter privately receives their unique tracker number from VMV. </p>
+<%= image_tag  "img3.png" %>
+<p> The voter can check that the vote recorded against that tracker number matches the vote that she cast. </p>
+<%= image_tag  "img4.png" %>
+<p> The result of the election is reported as 3 votes for Ann, and 2 votes for Bob. This result can be independently confirmed from the published votes. </p>
+
+<h3>Behind the Scenes</h3>
+<p>The system is designed to safeguard the secrecy of the ballot while ensuring the integrity of the election. It achieves this through the use of cryptography. The technical documentation provides the precise technical details. </p>
+<p> Here we will use analogies to provide an explanation of how the system works. </p>
+<p> The system relies on two elements: (1) tracker commitments, and (2) voting envelopes. </p>
+<h4>Tracker Commitments</h4>
+<p> Each voter has a unique private key that is not known by anyone else: </p>
+<%= image_tag  "img5.png" %>
+<p> This allows the VMV system to assign a tracker number to each voter but to keep that value secret: by putting it inside a box that can only be opened with the private key. The locked box looks like this: </p>
+<%= image_tag  "img6.png" %>
+<p> Only a voter with the private key will be able to open the box to reveal the tracker number: </p>
+<%= image_tag  "img7.png" %>
+<p> Before the beginning of the election, the door is removed from the box, so that the box without the door is completely sealed. This is given to the voter at the beginning of the election, providing a commitment to the tracker number contained in the box. </p>
+<%= image_tag  "img8.png" %>
+<h4>Voting Envelope</h4>
+<p> VMV creates a voting envelope for each voter. A voting envelope contains the tracker number assigned to the voter (the same tracker number as in the commitment box), and a slot for a vote to be inserted. The voting envelope can only be opened by the election authorities (with the election key). </p>
+<%= image_tag  "img9.png" %>
+
+<h3>Running the Election</h3>
+<p> The voter casts her vote by putting it inside her voting envelope to join the tracker number already in there. </p>
+<%= image_tag  "img10.png" %>
+
+<p> At the end of polling, all of the voting envelopes are collected together and shuffled so that no envelope can be associated with the voter who submitted it. </p>
+<%= image_tag  "img11.png" %>
+<p> The voting envelopes are then opened by the election authorities. All of the votes are published together with their tracker numbers. </p>
+<%= image_tag  "img12.png" %>
+
+<h3>Checking the Votes</h3>
+<p> After all the votes have been published, voters will want to check their votes. VMV sends each voter the door that goes with their tracker commitment box. The voter combines the door and the box, and unlocks it to obtain the tracker number: </p>
+<%= image_tag  "img13.png" %>
+<p> She can then check this tracker number on the list of published votes, and confirm that the vote recorded matches the vote that she cast: </p>
+<%= image_tag  "img14.png" %>
+
+</div>
+</div>

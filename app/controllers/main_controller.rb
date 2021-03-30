@@ -5,6 +5,15 @@ class MainController < ApplicationController
     @completed_elections = JSON.parse(json)
   end
 
+  def introduction
+  end
+
+  def about
+  end
+
+  def documents
+  end
+
   def BCExplorer
 
     type = params[:type]

@@ -31,7 +31,7 @@
       <tbody>
       <%  if !@checkes.nil? %>
       <% @checkes.each do |id| %>
-        <% @candidate= @election["candidates"].detect { |obj| obj['id'] == id.to_i} %>
+        <% @candidate= @election["candidates"].detect { |obj| obj['id'] == id.to_s} %>
         <tr>
           <td style="color: blue;"><%= @candidate["name"] %></td>
         </tr>

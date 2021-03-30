@@ -1,0 +1,80 @@
+<br><br><br><br><br><br>
+<nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top" style="background:white;">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag  "surrey-891e3c9e20d6f1d8c3753187a9e57594a02314ed145afb3740ac8b7d00f3a155.png" %>
+
+    </a><button class="navbar-toggler" data-aria-controls="navbar" data-aria-label="Toggle navigation" data-target="#navbar" data-toggle="collapse" type="button">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="/main">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/main/introduction">Introduction</a></li>
+        <li class="nav-item"><a class="nav-link" href="/main/about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/main/documents">Documents</a></li>
+        <li class="nav-item"><a class="nav-link" href="/election/index">Elections</a></li>
+        <li class="nav-item" ><a class="nav-link" href="/main/verifiable">Verifiable Voting</a></li>
+       </ul>
+      <ul class="navbar-nav">
+      </ul>
+    </div>
+    <p><a class="nav-link" href="/voter/elections"> Voter <a/> </p>
+		<p><a class="nav-link" href="/admin/index"> Admin </a> </p>
+  </div>
+</nav>
+<div class='container'>
+<div class="jumbotron bg-white border mb-0 py-5">
+<h3> Documents </h3><br>
+<p>Verify My Vote (VMV) is an implementation of the Selene system, adapted to work with the Electoral Reform Services Internet voting system, and to make use of distributed ledger technology to assure the integrity of the election verifiability data. </p> 
+<p>Download documentation and source code for the project from the table below by selecting an item:</p><br>
+<div class="contentTable">
+<% index  = 1 %>
+<% data = []%>
+<table id="docsTable" class="contentTable table table-striped table-bordered" style="width:100%">
+        <thead class='thead-light'>
+            <tr>
+            <th>Document</th>   
+            <th>Description</th>   
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+               <td><%= link_to image_tag("file.png", border: 0, width: 30, height: 30), "/files/docs/verifiable_voting-cbaee1298921d77b120739e7e84a1d76f51da3486af36fca03a63baa651bc8b6.pdf", download: "verifiable-voting.pdf", class:"bi bi-arrow-down-circle-fill"%></td>
+               <td>Description of Verifiable Voting</td>
+            </tr>
+            <tr>
+              <td><%= link_to image_tag("file.png", border: 0, width: 30, height: 30), "/files/docs/2015-1105.pdf", download: "selene.pdf", class:"bi bi-arrow-down-circle-fill"%></td>
+               <td>Selene: Voting with Transparent Verifiability and Coercion-Mitigation</td>
+            </tr>
+            <tr>
+              <td><%= link_to image_tag("file.png", border: 0, width: 30, height: 30), "/files/docs/vmv-a70d5586766561ededb358fc874d11f69f0a53c9ce2a7414129587eb5acba4ad.pdf", download: "vmv.pdf", class:"bi bi-arrow-down-circle-fill"%></td>
+               <td>VMV: Augmenting Internet Voting Systems with Selene Verifiability using Permissioned Distributed Ledger</td>
+            </tr>
+            <tr>
+              <td><%= link_to image_tag("file.png", border: 0, width: 30, height: 30), "/files/docs/survey-9b94b5449d395cd95e6b69bb65f4d59bc86332e5e19b8a17112099627b233951.pdf", download: "survey_information.pdf", class:"bi bi-arrow-down-circle-fill"%></td>
+               <td>Information for survey participants</td>
+            </tr>
+            <tr>
+               <td><%= link_to image_tag("file.png", border: 0, width: 30, height: 30), "/files/docs/design-e239b39c0644163b80e4d08026b4e77120ed827868e4f950102a214c2d378dd5.pdf", download: "vmv_design.pdf", class:"bi bi-arrow-down-circle-fill"%></td>
+               <td>Software design document for VMV</td>
+            </tr>
+            <tr>
+                <td><%= link_to image_tag("file.png", border: 0, width: 30, height: 30), "/files/docs/manual-049a54a2cd051cacef1ba0015dac53b6c70f3520050351a602858fb427c34c53.pdf", download: "user_manual.pdf", class:"bi bi-arrow-down-circle-fill"%></td>
+               <td>Software user manual for VMV</td>
+            </tr>
+            <tr>
+              <td><%= link_to image_tag("file.png", border: 0, width: 30, height: 30), "https://github.com/malsadi87/VMV/archive/refs/heads/main.zip", download: "vmv.zip", class:"bi bi-arrow-down-circle-fill"%></td>
+               <td>Source code: implementation of Selene within VMV</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <script>
+    $(document).ready(function() {
+    $('#docsTable').DataTable();
+} );
+    </script>
+    
+ </div>  
+ </div>

@@ -73,6 +73,8 @@ Rails.application.configure do
          :password             => Rails.application.credentials.surrey.dig(:password),
          :authentication       => :login,
          :domain               => Rails.application.credentials.surrey.dig(:domain),
+         :ssl                  => true,
+         :openssl_verify_mode  => 'none'
          :enable_starttls_auto => true
      }
 

@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
 
   #admin controller - GET
+  
   get "admin/index"
   get 'admin/dashboard'
   get 'admin/elections'
@@ -46,7 +47,9 @@ Rails.application.routes.draw do
   get "main/verifiable"
   get "main/elections"
   get "main/BCExplorer"
-
+  get "main/introduction"
+  get "main/about"
+  get "main/documents"
   #match 'election/record' => 'election#record', :as => :get_election_record, :via => [:get, :post]
 
 

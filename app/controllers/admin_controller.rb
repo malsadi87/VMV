@@ -50,7 +50,7 @@ class AdminController < ApplicationController
     require 'json'
     require 'csv'
 
-    @VotersList = CSV.parse(File.read('public/files/voters.csv'), headers: true)
+        @VotersList = CSV.parse(File.read('public/files/voters.csv'), headers: true)
     table = CSV.parse(File.read('public/files/ers-associated-voters.csv'), headers: true)
 
     name = params[:election]
@@ -68,6 +68,8 @@ class AdminController < ApplicationController
        UserMailer.welcome_email(voter["email"]).deliver
       end
     end
+
+
 
     ## Generate OTPs and send them to voters phones
     #helpers.send_otp
